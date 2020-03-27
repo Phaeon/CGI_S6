@@ -1,0 +1,2255 @@
+
+une_main:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000400df8 <_init>:
+  400df8:	48 83 ec 08          	sub    $0x8,%rsp
+  400dfc:	48 8b 05 f5 31 20 00 	mov    0x2031f5(%rip),%rax        # 603ff8 <__gmon_start__>
+  400e03:	48 85 c0             	test   %rax,%rax
+  400e06:	74 05                	je     400e0d <_init+0x15>
+  400e08:	e8 73 00 00 00       	callq  400e80 <__gmon_start__@plt>
+  400e0d:	48 83 c4 08          	add    $0x8,%rsp
+  400e11:	c3                   	retq   
+
+Disassembly of section .plt:
+
+0000000000400e20 <.plt>:
+  400e20:	ff 35 e2 31 20 00    	pushq  0x2031e2(%rip)        # 604008 <_GLOBAL_OFFSET_TABLE_+0x8>
+  400e26:	ff 25 e4 31 20 00    	jmpq   *0x2031e4(%rip)        # 604010 <_GLOBAL_OFFSET_TABLE_+0x10>
+  400e2c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000400e30 <glutSwapBuffers@plt>:
+  400e30:	ff 25 e2 31 20 00    	jmpq   *0x2031e2(%rip)        # 604018 <glutSwapBuffers>
+  400e36:	68 00 00 00 00       	pushq  $0x0
+  400e3b:	e9 e0 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400e40 <glEnable@plt>:
+  400e40:	ff 25 da 31 20 00    	jmpq   *0x2031da(%rip)        # 604020 <glEnable>
+  400e46:	68 01 00 00 00       	pushq  $0x1
+  400e4b:	e9 d0 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400e50 <printf@plt>:
+  400e50:	ff 25 d2 31 20 00    	jmpq   *0x2031d2(%rip)        # 604028 <printf@GLIBC_2.2.5>
+  400e56:	68 02 00 00 00       	pushq  $0x2
+  400e5b:	e9 c0 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400e60 <glutInitWindowSize@plt>:
+  400e60:	ff 25 ca 31 20 00    	jmpq   *0x2031ca(%rip)        # 604030 <glutInitWindowSize>
+  400e66:	68 03 00 00 00       	pushq  $0x3
+  400e6b:	e9 b0 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400e70 <glMatrixMode@plt>:
+  400e70:	ff 25 c2 31 20 00    	jmpq   *0x2031c2(%rip)        # 604038 <glMatrixMode>
+  400e76:	68 04 00 00 00       	pushq  $0x4
+  400e7b:	e9 a0 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400e80 <__gmon_start__@plt>:
+  400e80:	ff 25 ba 31 20 00    	jmpq   *0x2031ba(%rip)        # 604040 <__gmon_start__>
+  400e86:	68 05 00 00 00       	pushq  $0x5
+  400e8b:	e9 90 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400e90 <glDisable@plt>:
+  400e90:	ff 25 b2 31 20 00    	jmpq   *0x2031b2(%rip)        # 604048 <glDisable>
+  400e96:	68 06 00 00 00       	pushq  $0x6
+  400e9b:	e9 80 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400ea0 <glClear@plt>:
+  400ea0:	ff 25 aa 31 20 00    	jmpq   *0x2031aa(%rip)        # 604050 <glClear>
+  400ea6:	68 07 00 00 00       	pushq  $0x7
+  400eab:	e9 70 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400eb0 <exit@plt>:
+  400eb0:	ff 25 a2 31 20 00    	jmpq   *0x2031a2(%rip)        # 604058 <exit@GLIBC_2.2.5>
+  400eb6:	68 08 00 00 00       	pushq  $0x8
+  400ebb:	e9 60 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400ec0 <glutIdleFunc@plt>:
+  400ec0:	ff 25 9a 31 20 00    	jmpq   *0x20319a(%rip)        # 604060 <glutIdleFunc>
+  400ec6:	68 09 00 00 00       	pushq  $0x9
+  400ecb:	e9 50 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400ed0 <glutSpecialFunc@plt>:
+  400ed0:	ff 25 92 31 20 00    	jmpq   *0x203192(%rip)        # 604068 <glutSpecialFunc>
+  400ed6:	68 0a 00 00 00       	pushq  $0xa
+  400edb:	e9 40 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400ee0 <glutInit@plt>:
+  400ee0:	ff 25 8a 31 20 00    	jmpq   *0x20318a(%rip)        # 604070 <glutInit>
+  400ee6:	68 0b 00 00 00       	pushq  $0xb
+  400eeb:	e9 30 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400ef0 <__libc_start_main@plt>:
+  400ef0:	ff 25 82 31 20 00    	jmpq   *0x203182(%rip)        # 604078 <__libc_start_main@GLIBC_2.2.5>
+  400ef6:	68 0c 00 00 00       	pushq  $0xc
+  400efb:	e9 20 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400f00 <glutDisplayFunc@plt>:
+  400f00:	ff 25 7a 31 20 00    	jmpq   *0x20317a(%rip)        # 604080 <glutDisplayFunc>
+  400f06:	68 0d 00 00 00       	pushq  $0xd
+  400f0b:	e9 10 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400f10 <glLoadIdentity@plt>:
+  400f10:	ff 25 72 31 20 00    	jmpq   *0x203172(%rip)        # 604088 <glLoadIdentity>
+  400f16:	68 0e 00 00 00       	pushq  $0xe
+  400f1b:	e9 00 ff ff ff       	jmpq   400e20 <.plt>
+
+0000000000400f20 <glClearColor@plt>:
+  400f20:	ff 25 6a 31 20 00    	jmpq   *0x20316a(%rip)        # 604090 <glClearColor>
+  400f26:	68 0f 00 00 00       	pushq  $0xf
+  400f2b:	e9 f0 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000400f30 <glutInitWindowPosition@plt>:
+  400f30:	ff 25 62 31 20 00    	jmpq   *0x203162(%rip)        # 604098 <glutInitWindowPosition>
+  400f36:	68 10 00 00 00       	pushq  $0x10
+  400f3b:	e9 e0 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000400f40 <glShadeModel@plt>:
+  400f40:	ff 25 5a 31 20 00    	jmpq   *0x20315a(%rip)        # 6040a0 <glShadeModel>
+  400f46:	68 11 00 00 00       	pushq  $0x11
+  400f4b:	e9 d0 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000400f50 <glutReshapeFunc@plt>:
+  400f50:	ff 25 52 31 20 00    	jmpq   *0x203152(%rip)        # 6040a8 <glutReshapeFunc>
+  400f56:	68 12 00 00 00       	pushq  $0x12
+  400f5b:	e9 c0 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000400f60 <glBlendFunc@plt>:
+  400f60:	ff 25 4a 31 20 00    	jmpq   *0x20314a(%rip)        # 6040b0 <glBlendFunc>
+  400f66:	68 13 00 00 00       	pushq  $0x13
+  400f6b:	e9 b0 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000400f70 <usleep@plt>:
+  400f70:	ff 25 42 31 20 00    	jmpq   *0x203142(%rip)        # 6040b8 <usleep@GLIBC_2.2.5>
+  400f76:	68 14 00 00 00       	pushq  $0x14
+  400f7b:	e9 a0 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000400f80 <glTranslatef@plt>:
+  400f80:	ff 25 3a 31 20 00    	jmpq   *0x20313a(%rip)        # 6040c0 <glTranslatef>
+  400f86:	68 15 00 00 00       	pushq  $0x15
+  400f8b:	e9 90 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000400f90 <glScalef@plt>:
+  400f90:	ff 25 32 31 20 00    	jmpq   *0x203132(%rip)        # 6040c8 <glScalef>
+  400f96:	68 16 00 00 00       	pushq  $0x16
+  400f9b:	e9 80 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000400fa0 <glutSolidCone@plt>:
+  400fa0:	ff 25 2a 31 20 00    	jmpq   *0x20312a(%rip)        # 6040d0 <glutSolidCone>
+  400fa6:	68 17 00 00 00       	pushq  $0x17
+  400fab:	e9 70 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000400fb0 <glutCreateWindow@plt>:
+  400fb0:	ff 25 22 31 20 00    	jmpq   *0x203122(%rip)        # 6040d8 <glutCreateWindow>
+  400fb6:	68 18 00 00 00       	pushq  $0x18
+  400fbb:	e9 60 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000400fc0 <glutSolidCube@plt>:
+  400fc0:	ff 25 1a 31 20 00    	jmpq   *0x20311a(%rip)        # 6040e0 <glutSolidCube>
+  400fc6:	68 19 00 00 00       	pushq  $0x19
+  400fcb:	e9 50 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000400fd0 <glRotatef@plt>:
+  400fd0:	ff 25 12 31 20 00    	jmpq   *0x203112(%rip)        # 6040e8 <glRotatef>
+  400fd6:	68 1a 00 00 00       	pushq  $0x1a
+  400fdb:	e9 40 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000400fe0 <glDepthFunc@plt>:
+  400fe0:	ff 25 0a 31 20 00    	jmpq   *0x20310a(%rip)        # 6040f0 <glDepthFunc>
+  400fe6:	68 1b 00 00 00       	pushq  $0x1b
+  400feb:	e9 30 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000400ff0 <glClearDepth@plt>:
+  400ff0:	ff 25 02 31 20 00    	jmpq   *0x203102(%rip)        # 6040f8 <glClearDepth>
+  400ff6:	68 1c 00 00 00       	pushq  $0x1c
+  400ffb:	e9 20 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000401000 <glLightfv@plt>:
+  401000:	ff 25 fa 30 20 00    	jmpq   *0x2030fa(%rip)        # 604100 <glLightfv>
+  401006:	68 1d 00 00 00       	pushq  $0x1d
+  40100b:	e9 10 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000401010 <glPushMatrix@plt>:
+  401010:	ff 25 f2 30 20 00    	jmpq   *0x2030f2(%rip)        # 604108 <glPushMatrix>
+  401016:	68 1e 00 00 00       	pushq  $0x1e
+  40101b:	e9 00 fe ff ff       	jmpq   400e20 <.plt>
+
+0000000000401020 <glutKeyboardFunc@plt>:
+  401020:	ff 25 ea 30 20 00    	jmpq   *0x2030ea(%rip)        # 604110 <glutKeyboardFunc>
+  401026:	68 1f 00 00 00       	pushq  $0x1f
+  40102b:	e9 f0 fd ff ff       	jmpq   400e20 <.plt>
+
+0000000000401030 <glColor3f@plt>:
+  401030:	ff 25 e2 30 20 00    	jmpq   *0x2030e2(%rip)        # 604118 <glColor3f>
+  401036:	68 20 00 00 00       	pushq  $0x20
+  40103b:	e9 e0 fd ff ff       	jmpq   400e20 <.plt>
+
+0000000000401040 <glutInitDisplayMode@plt>:
+  401040:	ff 25 da 30 20 00    	jmpq   *0x2030da(%rip)        # 604120 <glutInitDisplayMode>
+  401046:	68 21 00 00 00       	pushq  $0x21
+  40104b:	e9 d0 fd ff ff       	jmpq   400e20 <.plt>
+
+0000000000401050 <glPopMatrix@plt>:
+  401050:	ff 25 d2 30 20 00    	jmpq   *0x2030d2(%rip)        # 604128 <glPopMatrix>
+  401056:	68 22 00 00 00       	pushq  $0x22
+  40105b:	e9 c0 fd ff ff       	jmpq   400e20 <.plt>
+
+0000000000401060 <glViewport@plt>:
+  401060:	ff 25 ca 30 20 00    	jmpq   *0x2030ca(%rip)        # 604130 <glViewport>
+  401066:	68 23 00 00 00       	pushq  $0x23
+  40106b:	e9 b0 fd ff ff       	jmpq   400e20 <.plt>
+
+0000000000401070 <gluPerspective@plt>:
+  401070:	ff 25 c2 30 20 00    	jmpq   *0x2030c2(%rip)        # 604138 <gluPerspective>
+  401076:	68 24 00 00 00       	pushq  $0x24
+  40107b:	e9 a0 fd ff ff       	jmpq   400e20 <.plt>
+
+0000000000401080 <glutMainLoop@plt>:
+  401080:	ff 25 ba 30 20 00    	jmpq   *0x2030ba(%rip)        # 604140 <glutMainLoop>
+  401086:	68 25 00 00 00       	pushq  $0x25
+  40108b:	e9 90 fd ff ff       	jmpq   400e20 <.plt>
+
+Disassembly of section .text:
+
+0000000000401090 <_start>:
+  401090:	31 ed                	xor    %ebp,%ebp
+  401092:	49 89 d1             	mov    %rdx,%r9
+  401095:	5e                   	pop    %rsi
+  401096:	48 89 e2             	mov    %rsp,%rdx
+  401099:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+  40109d:	50                   	push   %rax
+  40109e:	54                   	push   %rsp
+  40109f:	49 c7 c0 00 2e 40 00 	mov    $0x402e00,%r8
+  4010a6:	48 c7 c1 90 2d 40 00 	mov    $0x402d90,%rcx
+  4010ad:	48 c7 c7 37 18 40 00 	mov    $0x401837,%rdi
+  4010b4:	e8 37 fe ff ff       	callq  400ef0 <__libc_start_main@plt>
+  4010b9:	f4                   	hlt    
+  4010ba:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+00000000004010c0 <deregister_tm_clones>:
+  4010c0:	b8 67 41 60 00       	mov    $0x604167,%eax
+  4010c5:	55                   	push   %rbp
+  4010c6:	48 2d 60 41 60 00    	sub    $0x604160,%rax
+  4010cc:	48 83 f8 0e          	cmp    $0xe,%rax
+  4010d0:	48 89 e5             	mov    %rsp,%rbp
+  4010d3:	77 02                	ja     4010d7 <deregister_tm_clones+0x17>
+  4010d5:	5d                   	pop    %rbp
+  4010d6:	c3                   	retq   
+  4010d7:	b8 00 00 00 00       	mov    $0x0,%eax
+  4010dc:	48 85 c0             	test   %rax,%rax
+  4010df:	74 f4                	je     4010d5 <deregister_tm_clones+0x15>
+  4010e1:	5d                   	pop    %rbp
+  4010e2:	bf 60 41 60 00       	mov    $0x604160,%edi
+  4010e7:	ff e0                	jmpq   *%rax
+  4010e9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000004010f0 <register_tm_clones>:
+  4010f0:	b8 60 41 60 00       	mov    $0x604160,%eax
+  4010f5:	55                   	push   %rbp
+  4010f6:	48 2d 60 41 60 00    	sub    $0x604160,%rax
+  4010fc:	48 c1 f8 03          	sar    $0x3,%rax
+  401100:	48 89 e5             	mov    %rsp,%rbp
+  401103:	48 89 c2             	mov    %rax,%rdx
+  401106:	48 c1 ea 3f          	shr    $0x3f,%rdx
+  40110a:	48 01 d0             	add    %rdx,%rax
+  40110d:	48 d1 f8             	sar    %rax
+  401110:	75 02                	jne    401114 <register_tm_clones+0x24>
+  401112:	5d                   	pop    %rbp
+  401113:	c3                   	retq   
+  401114:	ba 00 00 00 00       	mov    $0x0,%edx
+  401119:	48 85 d2             	test   %rdx,%rdx
+  40111c:	74 f4                	je     401112 <register_tm_clones+0x22>
+  40111e:	5d                   	pop    %rbp
+  40111f:	48 89 c6             	mov    %rax,%rsi
+  401122:	bf 60 41 60 00       	mov    $0x604160,%edi
+  401127:	ff e2                	jmpq   *%rdx
+  401129:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000401130 <__do_global_dtors_aux>:
+  401130:	80 3d 29 30 20 00 00 	cmpb   $0x0,0x203029(%rip)        # 604160 <__TMC_END__>
+  401137:	75 11                	jne    40114a <__do_global_dtors_aux+0x1a>
+  401139:	55                   	push   %rbp
+  40113a:	48 89 e5             	mov    %rsp,%rbp
+  40113d:	e8 7e ff ff ff       	callq  4010c0 <deregister_tm_clones>
+  401142:	5d                   	pop    %rbp
+  401143:	c6 05 16 30 20 00 01 	movb   $0x1,0x203016(%rip)        # 604160 <__TMC_END__>
+  40114a:	f3 c3                	repz retq 
+  40114c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000401150 <frame_dummy>:
+  401150:	48 83 3d 98 2c 20 00 	cmpq   $0x0,0x202c98(%rip)        # 603df0 <__JCR_END__>
+  401157:	00 
+  401158:	74 1e                	je     401178 <frame_dummy+0x28>
+  40115a:	b8 00 00 00 00       	mov    $0x0,%eax
+  40115f:	48 85 c0             	test   %rax,%rax
+  401162:	74 14                	je     401178 <frame_dummy+0x28>
+  401164:	55                   	push   %rbp
+  401165:	bf f0 3d 60 00       	mov    $0x603df0,%edi
+  40116a:	48 89 e5             	mov    %rsp,%rbp
+  40116d:	ff d0                	callq  *%rax
+  40116f:	5d                   	pop    %rbp
+  401170:	e9 7b ff ff ff       	jmpq   4010f0 <register_tm_clones>
+  401175:	0f 1f 00             	nopl   (%rax)
+  401178:	e9 73 ff ff ff       	jmpq   4010f0 <register_tm_clones>
+
+000000000040117d <Rectangle>:
+  40117d:	55                   	push   %rbp
+  40117e:	48 89 e5             	mov    %rsp,%rbp
+  401181:	48 83 ec 10          	sub    $0x10,%rsp
+  401185:	f3 0f 11 45 fc       	movss  %xmm0,-0x4(%rbp)
+  40118a:	f3 0f 11 4d f8       	movss  %xmm1,-0x8(%rbp)
+  40118f:	f3 0f 11 55 f4       	movss  %xmm2,-0xc(%rbp)
+  401194:	e8 77 fe ff ff       	callq  401010 <glPushMatrix@plt>
+  401199:	8b 4d f4             	mov    -0xc(%rbp),%ecx
+  40119c:	8b 55 f8             	mov    -0x8(%rbp),%edx
+  40119f:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  4011a2:	89 4d f0             	mov    %ecx,-0x10(%rbp)
+  4011a5:	f3 0f 10 55 f0       	movss  -0x10(%rbp),%xmm2
+  4011aa:	89 55 f0             	mov    %edx,-0x10(%rbp)
+  4011ad:	f3 0f 10 4d f0       	movss  -0x10(%rbp),%xmm1
+  4011b2:	89 45 f0             	mov    %eax,-0x10(%rbp)
+  4011b5:	f3 0f 10 45 f0       	movss  -0x10(%rbp),%xmm0
+  4011ba:	e8 d1 fd ff ff       	callq  400f90 <glScalef@plt>
+  4011bf:	f2 0f 10 05 59 1c 00 	movsd  0x1c59(%rip),%xmm0        # 402e20 <_IO_stdin_used+0x10>
+  4011c6:	00 
+  4011c7:	e8 f4 fd ff ff       	callq  400fc0 <glutSolidCube@plt>
+  4011cc:	e8 7f fe ff ff       	callq  401050 <glPopMatrix@plt>
+  4011d1:	c9                   	leaveq 
+  4011d2:	c3                   	retq   
+
+00000000004011d3 <Paume>:
+  4011d3:	55                   	push   %rbp
+  4011d4:	48 89 e5             	mov    %rsp,%rbp
+  4011d7:	48 83 ec 10          	sub    $0x10,%rsp
+  4011db:	f3 0f 11 45 fc       	movss  %xmm0,-0x4(%rbp)
+  4011e0:	f3 0f 11 4d f8       	movss  %xmm1,-0x8(%rbp)
+  4011e5:	f3 0f 11 55 f4       	movss  %xmm2,-0xc(%rbp)
+  4011ea:	8b 4d f4             	mov    -0xc(%rbp),%ecx
+  4011ed:	8b 55 f8             	mov    -0x8(%rbp),%edx
+  4011f0:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  4011f3:	89 4d f0             	mov    %ecx,-0x10(%rbp)
+  4011f6:	f3 0f 10 55 f0       	movss  -0x10(%rbp),%xmm2
+  4011fb:	89 55 f0             	mov    %edx,-0x10(%rbp)
+  4011fe:	f3 0f 10 4d f0       	movss  -0x10(%rbp),%xmm1
+  401203:	89 45 f0             	mov    %eax,-0x10(%rbp)
+  401206:	f3 0f 10 45 f0       	movss  -0x10(%rbp),%xmm0
+  40120b:	e8 6d ff ff ff       	callq  40117d <Rectangle>
+  401210:	c9                   	leaveq 
+  401211:	c3                   	retq   
+
+0000000000401212 <Doigt>:
+  401212:	55                   	push   %rbp
+  401213:	48 89 e5             	mov    %rsp,%rbp
+  401216:	48 83 ec 20          	sub    $0x20,%rsp
+  40121a:	f3 0f 11 45 fc       	movss  %xmm0,-0x4(%rbp)
+  40121f:	f3 0f 11 4d f8       	movss  %xmm1,-0x8(%rbp)
+  401224:	f3 0f 11 55 f4       	movss  %xmm2,-0xc(%rbp)
+  401229:	f3 0f 11 5d f0       	movss  %xmm3,-0x10(%rbp)
+  40122e:	f3 0f 11 65 ec       	movss  %xmm4,-0x14(%rbp)
+  401233:	e8 d8 fd ff ff       	callq  401010 <glPushMatrix@plt>
+  401238:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  40123b:	f3 0f 10 1d e5 1b 00 	movss  0x1be5(%rip),%xmm3        # 402e28 <_IO_stdin_used+0x18>
+  401242:	00 
+  401243:	0f 57 d2             	xorps  %xmm2,%xmm2
+  401246:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401249:	89 45 e8             	mov    %eax,-0x18(%rbp)
+  40124c:	f3 0f 10 45 e8       	movss  -0x18(%rbp),%xmm0
+  401251:	e8 7a fd ff ff       	callq  400fd0 <glRotatef@plt>
+  401256:	f3 0f 10 4d f0       	movss  -0x10(%rbp),%xmm1
+  40125b:	f3 0f 10 05 c9 1b 00 	movss  0x1bc9(%rip),%xmm0        # 402e2c <_IO_stdin_used+0x1c>
+  401262:	00 
+  401263:	f3 0f 59 c1          	mulss  %xmm1,%xmm0
+  401267:	0f 57 d2             	xorps  %xmm2,%xmm2
+  40126a:	0f 57 c9             	xorps  %xmm1,%xmm1
+  40126d:	e8 0e fd ff ff       	callq  400f80 <glTranslatef@plt>
+  401272:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+  401275:	8b 55 ec             	mov    -0x14(%rbp),%edx
+  401278:	8b 45 f0             	mov    -0x10(%rbp),%eax
+  40127b:	89 4d e8             	mov    %ecx,-0x18(%rbp)
+  40127e:	f3 0f 10 55 e8       	movss  -0x18(%rbp),%xmm2
+  401283:	89 55 e8             	mov    %edx,-0x18(%rbp)
+  401286:	f3 0f 10 4d e8       	movss  -0x18(%rbp),%xmm1
+  40128b:	89 45 e8             	mov    %eax,-0x18(%rbp)
+  40128e:	f3 0f 10 45 e8       	movss  -0x18(%rbp),%xmm0
+  401293:	e8 e5 fe ff ff       	callq  40117d <Rectangle>
+  401298:	f3 0f 10 4d f0       	movss  -0x10(%rbp),%xmm1
+  40129d:	f3 0f 10 05 87 1b 00 	movss  0x1b87(%rip),%xmm0        # 402e2c <_IO_stdin_used+0x1c>
+  4012a4:	00 
+  4012a5:	f3 0f 59 c1          	mulss  %xmm1,%xmm0
+  4012a9:	0f 57 d2             	xorps  %xmm2,%xmm2
+  4012ac:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4012af:	e8 cc fc ff ff       	callq  400f80 <glTranslatef@plt>
+  4012b4:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  4012b7:	f3 0f 10 1d 69 1b 00 	movss  0x1b69(%rip),%xmm3        # 402e28 <_IO_stdin_used+0x18>
+  4012be:	00 
+  4012bf:	0f 57 d2             	xorps  %xmm2,%xmm2
+  4012c2:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4012c5:	89 45 e8             	mov    %eax,-0x18(%rbp)
+  4012c8:	f3 0f 10 45 e8       	movss  -0x18(%rbp),%xmm0
+  4012cd:	e8 fe fc ff ff       	callq  400fd0 <glRotatef@plt>
+  4012d2:	f3 0f 10 4d f0       	movss  -0x10(%rbp),%xmm1
+  4012d7:	f3 0f 10 05 51 1b 00 	movss  0x1b51(%rip),%xmm0        # 402e30 <_IO_stdin_used+0x20>
+  4012de:	00 
+  4012df:	f3 0f 59 c1          	mulss  %xmm1,%xmm0
+  4012e3:	0f 57 d2             	xorps  %xmm2,%xmm2
+  4012e6:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4012e9:	e8 92 fc ff ff       	callq  400f80 <glTranslatef@plt>
+  4012ee:	f3 0f 10 4d f0       	movss  -0x10(%rbp),%xmm1
+  4012f3:	f3 0f 10 05 39 1b 00 	movss  0x1b39(%rip),%xmm0        # 402e34 <_IO_stdin_used+0x24>
+  4012fa:	00 
+  4012fb:	f3 0f 59 c1          	mulss  %xmm1,%xmm0
+  4012ff:	8b 55 ec             	mov    -0x14(%rbp),%edx
+  401302:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  401305:	89 55 e8             	mov    %edx,-0x18(%rbp)
+  401308:	f3 0f 10 55 e8       	movss  -0x18(%rbp),%xmm2
+  40130d:	89 45 e8             	mov    %eax,-0x18(%rbp)
+  401310:	f3 0f 10 4d e8       	movss  -0x18(%rbp),%xmm1
+  401315:	e8 63 fe ff ff       	callq  40117d <Rectangle>
+  40131a:	f3 0f 10 4d f0       	movss  -0x10(%rbp),%xmm1
+  40131f:	f3 0f 10 05 09 1b 00 	movss  0x1b09(%rip),%xmm0        # 402e30 <_IO_stdin_used+0x20>
+  401326:	00 
+  401327:	f3 0f 59 c1          	mulss  %xmm1,%xmm0
+  40132b:	0f 57 d2             	xorps  %xmm2,%xmm2
+  40132e:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401331:	e8 4a fc ff ff       	callq  400f80 <glTranslatef@plt>
+  401336:	8b 45 f4             	mov    -0xc(%rbp),%eax
+  401339:	f3 0f 10 1d e7 1a 00 	movss  0x1ae7(%rip),%xmm3        # 402e28 <_IO_stdin_used+0x18>
+  401340:	00 
+  401341:	0f 57 d2             	xorps  %xmm2,%xmm2
+  401344:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401347:	89 45 e8             	mov    %eax,-0x18(%rbp)
+  40134a:	f3 0f 10 45 e8       	movss  -0x18(%rbp),%xmm0
+  40134f:	e8 7c fc ff ff       	callq  400fd0 <glRotatef@plt>
+  401354:	f3 0f 10 4d f0       	movss  -0x10(%rbp),%xmm1
+  401359:	f3 0f 10 05 d7 1a 00 	movss  0x1ad7(%rip),%xmm0        # 402e38 <_IO_stdin_used+0x28>
+  401360:	00 
+  401361:	f3 0f 59 c1          	mulss  %xmm1,%xmm0
+  401365:	0f 57 d2             	xorps  %xmm2,%xmm2
+  401368:	0f 57 c9             	xorps  %xmm1,%xmm1
+  40136b:	e8 10 fc ff ff       	callq  400f80 <glTranslatef@plt>
+  401370:	f3 0f 10 4d f0       	movss  -0x10(%rbp),%xmm1
+  401375:	f3 0f 10 05 bf 1a 00 	movss  0x1abf(%rip),%xmm0        # 402e3c <_IO_stdin_used+0x2c>
+  40137c:	00 
+  40137d:	f3 0f 59 c1          	mulss  %xmm1,%xmm0
+  401381:	8b 55 ec             	mov    -0x14(%rbp),%edx
+  401384:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  401387:	89 55 e8             	mov    %edx,-0x18(%rbp)
+  40138a:	f3 0f 10 55 e8       	movss  -0x18(%rbp),%xmm2
+  40138f:	89 45 e8             	mov    %eax,-0x18(%rbp)
+  401392:	f3 0f 10 4d e8       	movss  -0x18(%rbp),%xmm1
+  401397:	e8 e1 fd ff ff       	callq  40117d <Rectangle>
+  40139c:	e8 af fc ff ff       	callq  401050 <glPopMatrix@plt>
+  4013a1:	c9                   	leaveq 
+  4013a2:	c3                   	retq   
+
+00000000004013a3 <Pouce>:
+  4013a3:	55                   	push   %rbp
+  4013a4:	48 89 e5             	mov    %rsp,%rbp
+  4013a7:	48 83 ec 20          	sub    $0x20,%rsp
+  4013ab:	f3 0f 11 45 fc       	movss  %xmm0,-0x4(%rbp)
+  4013b0:	f3 0f 11 4d f8       	movss  %xmm1,-0x8(%rbp)
+  4013b5:	f3 0f 11 55 f4       	movss  %xmm2,-0xc(%rbp)
+  4013ba:	f3 0f 11 5d f0       	movss  %xmm3,-0x10(%rbp)
+  4013bf:	e8 4c fc ff ff       	callq  401010 <glPushMatrix@plt>
+  4013c4:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  4013c7:	f3 0f 10 1d 59 1a 00 	movss  0x1a59(%rip),%xmm3        # 402e28 <_IO_stdin_used+0x18>
+  4013ce:	00 
+  4013cf:	0f 57 d2             	xorps  %xmm2,%xmm2
+  4013d2:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4013d5:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  4013d8:	f3 0f 10 45 ec       	movss  -0x14(%rbp),%xmm0
+  4013dd:	e8 ee fb ff ff       	callq  400fd0 <glRotatef@plt>
+  4013e2:	0f 57 d2             	xorps  %xmm2,%xmm2
+  4013e5:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4013e8:	f3 0f 10 05 4c 1a 00 	movss  0x1a4c(%rip),%xmm0        # 402e3c <_IO_stdin_used+0x2c>
+  4013ef:	00 
+  4013f0:	e8 8b fb ff ff       	callq  400f80 <glTranslatef@plt>
+  4013f5:	8b 45 f0             	mov    -0x10(%rbp),%eax
+  4013f8:	f3 0f 10 15 30 1a 00 	movss  0x1a30(%rip),%xmm2        # 402e30 <_IO_stdin_used+0x20>
+  4013ff:	00 
+  401400:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  401403:	f3 0f 10 4d ec       	movss  -0x14(%rbp),%xmm1
+  401408:	f3 0f 10 05 30 1a 00 	movss  0x1a30(%rip),%xmm0        # 402e40 <_IO_stdin_used+0x30>
+  40140f:	00 
+  401410:	e8 68 fd ff ff       	callq  40117d <Rectangle>
+  401415:	0f 57 d2             	xorps  %xmm2,%xmm2
+  401418:	0f 57 c9             	xorps  %xmm1,%xmm1
+  40141b:	f3 0f 10 05 19 1a 00 	movss  0x1a19(%rip),%xmm0        # 402e3c <_IO_stdin_used+0x2c>
+  401422:	00 
+  401423:	e8 58 fb ff ff       	callq  400f80 <glTranslatef@plt>
+  401428:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  40142b:	0f 57 db             	xorps  %xmm3,%xmm3
+  40142e:	f3 0f 10 15 f2 19 00 	movss  0x19f2(%rip),%xmm2        # 402e28 <_IO_stdin_used+0x18>
+  401435:	00 
+  401436:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401439:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  40143c:	f3 0f 10 45 ec       	movss  -0x14(%rbp),%xmm0
+  401441:	e8 8a fb ff ff       	callq  400fd0 <glRotatef@plt>
+  401446:	0f 57 d2             	xorps  %xmm2,%xmm2
+  401449:	0f 57 c9             	xorps  %xmm1,%xmm1
+  40144c:	f3 0f 10 05 dc 19 00 	movss  0x19dc(%rip),%xmm0        # 402e30 <_IO_stdin_used+0x20>
+  401453:	00 
+  401454:	e8 27 fb ff ff       	callq  400f80 <glTranslatef@plt>
+  401459:	8b 55 f0             	mov    -0x10(%rbp),%edx
+  40145c:	8b 45 f0             	mov    -0x10(%rbp),%eax
+  40145f:	89 55 ec             	mov    %edx,-0x14(%rbp)
+  401462:	f3 0f 10 55 ec       	movss  -0x14(%rbp),%xmm2
+  401467:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  40146a:	f3 0f 10 4d ec       	movss  -0x14(%rbp),%xmm1
+  40146f:	f3 0f 10 05 bd 19 00 	movss  0x19bd(%rip),%xmm0        # 402e34 <_IO_stdin_used+0x24>
+  401476:	00 
+  401477:	e8 01 fd ff ff       	callq  40117d <Rectangle>
+  40147c:	0f 57 d2             	xorps  %xmm2,%xmm2
+  40147f:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401482:	f3 0f 10 05 a6 19 00 	movss  0x19a6(%rip),%xmm0        # 402e30 <_IO_stdin_used+0x20>
+  401489:	00 
+  40148a:	e8 f1 fa ff ff       	callq  400f80 <glTranslatef@plt>
+  40148f:	8b 45 f4             	mov    -0xc(%rbp),%eax
+  401492:	0f 57 db             	xorps  %xmm3,%xmm3
+  401495:	f3 0f 10 15 8b 19 00 	movss  0x198b(%rip),%xmm2        # 402e28 <_IO_stdin_used+0x18>
+  40149c:	00 
+  40149d:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4014a0:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  4014a3:	f3 0f 10 45 ec       	movss  -0x14(%rbp),%xmm0
+  4014a8:	e8 23 fb ff ff       	callq  400fd0 <glRotatef@plt>
+  4014ad:	0f 57 d2             	xorps  %xmm2,%xmm2
+  4014b0:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4014b3:	f3 0f 10 05 7d 19 00 	movss  0x197d(%rip),%xmm0        # 402e38 <_IO_stdin_used+0x28>
+  4014ba:	00 
+  4014bb:	e8 c0 fa ff ff       	callq  400f80 <glTranslatef@plt>
+  4014c0:	8b 55 f0             	mov    -0x10(%rbp),%edx
+  4014c3:	8b 45 f0             	mov    -0x10(%rbp),%eax
+  4014c6:	89 55 ec             	mov    %edx,-0x14(%rbp)
+  4014c9:	f3 0f 10 55 ec       	movss  -0x14(%rbp),%xmm2
+  4014ce:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  4014d1:	f3 0f 10 4d ec       	movss  -0x14(%rbp),%xmm1
+  4014d6:	f3 0f 10 05 5e 19 00 	movss  0x195e(%rip),%xmm0        # 402e3c <_IO_stdin_used+0x2c>
+  4014dd:	00 
+  4014de:	e8 9a fc ff ff       	callq  40117d <Rectangle>
+  4014e3:	e8 68 fb ff ff       	callq  401050 <glPopMatrix@plt>
+  4014e8:	c9                   	leaveq 
+  4014e9:	c3                   	retq   
+
+00000000004014ea <Modelisation>:
+  4014ea:	55                   	push   %rbp
+  4014eb:	48 89 e5             	mov    %rsp,%rbp
+  4014ee:	48 83 ec 20          	sub    $0x20,%rsp
+  4014f2:	b8 00 00 00 00       	mov    $0x0,%eax
+  4014f7:	e8 f7 17 00 00       	callq  402cf3 <VM_init>
+  4014fc:	e8 0f fb ff ff       	callq  401010 <glPushMatrix@plt>
+  401501:	8b 05 21 19 00 00    	mov    0x1921(%rip),%eax        # 402e28 <_IO_stdin_used+0x18>
+  401507:	89 45 f4             	mov    %eax,-0xc(%rbp)
+  40150a:	8b 05 34 19 00 00    	mov    0x1934(%rip),%eax        # 402e44 <_IO_stdin_used+0x34>
+  401510:	89 45 f8             	mov    %eax,-0x8(%rbp)
+  401513:	8b 05 2f 19 00 00    	mov    0x192f(%rip),%eax        # 402e48 <_IO_stdin_used+0x38>
+  401519:	89 45 fc             	mov    %eax,-0x4(%rbp)
+  40151c:	8b 55 f4             	mov    -0xc(%rbp),%edx
+  40151f:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  401522:	89 55 ec             	mov    %edx,-0x14(%rbp)
+  401525:	f3 0f 10 55 ec       	movss  -0x14(%rbp),%xmm2
+  40152a:	f3 0f 10 0d 16 19 00 	movss  0x1916(%rip),%xmm1        # 402e48 <_IO_stdin_used+0x38>
+  401531:	00 
+  401532:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  401535:	f3 0f 10 45 ec       	movss  -0x14(%rbp),%xmm0
+  40153a:	e8 94 fc ff ff       	callq  4011d3 <Paume>
+  40153f:	e8 cc fa ff ff       	callq  401010 <glPushMatrix@plt>
+  401544:	0f 57 d2             	xorps  %xmm2,%xmm2
+  401547:	f3 0f 10 0d d9 18 00 	movss  0x18d9(%rip),%xmm1        # 402e28 <_IO_stdin_used+0x18>
+  40154e:	00 
+  40154f:	f3 0f 10 05 d1 18 00 	movss  0x18d1(%rip),%xmm0        # 402e28 <_IO_stdin_used+0x18>
+  401556:	00 
+  401557:	e8 d4 fa ff ff       	callq  401030 <glColor3f@plt>
+  40155c:	f3 0f 10 4d f4       	movss  -0xc(%rbp),%xmm1
+  401561:	f3 0f 10 05 e7 18 00 	movss  0x18e7(%rip),%xmm0        # 402e50 <_IO_stdin_used+0x40>
+  401568:	00 
+  401569:	0f 57 c1             	xorps  %xmm1,%xmm0
+  40156c:	f3 0f 10 0d ec 18 00 	movss  0x18ec(%rip),%xmm1        # 402e60 <_IO_stdin_used+0x50>
+  401573:	00 
+  401574:	f3 0f 5e c1          	divss  %xmm1,%xmm0
+  401578:	0f 28 c8             	movaps %xmm0,%xmm1
+  40157b:	f3 0f 10 55 f8       	movss  -0x8(%rbp),%xmm2
+  401580:	f3 0f 10 05 c8 18 00 	movss  0x18c8(%rip),%xmm0        # 402e50 <_IO_stdin_used+0x40>
+  401587:	00 
+  401588:	0f 57 c2             	xorps  %xmm2,%xmm0
+  40158b:	f3 0f 10 15 cd 18 00 	movss  0x18cd(%rip),%xmm2        # 402e60 <_IO_stdin_used+0x50>
+  401592:	00 
+  401593:	f3 0f 5e c2          	divss  %xmm2,%xmm0
+  401597:	0f 28 d1             	movaps %xmm1,%xmm2
+  40159a:	f3 0f 10 0d a6 18 00 	movss  0x18a6(%rip),%xmm1        # 402e48 <_IO_stdin_used+0x38>
+  4015a1:	00 
+  4015a2:	e8 d9 f9 ff ff       	callq  400f80 <glTranslatef@plt>
+  4015a7:	8b 0d c7 2b 20 00    	mov    0x202bc7(%rip),%ecx        # 604174 <angle_pouce_phalangine_phalangette>
+  4015ad:	8b 15 bd 2b 20 00    	mov    0x202bbd(%rip),%edx        # 604170 <angle_pouce_phalange_phalangine>
+  4015b3:	8b 05 b3 2b 20 00    	mov    0x202bb3(%rip),%eax        # 60416c <angle_paume_pouce>
+  4015b9:	8b 75 fc             	mov    -0x4(%rbp),%esi
+  4015bc:	89 75 ec             	mov    %esi,-0x14(%rbp)
+  4015bf:	f3 0f 10 5d ec       	movss  -0x14(%rbp),%xmm3
+  4015c4:	89 4d ec             	mov    %ecx,-0x14(%rbp)
+  4015c7:	f3 0f 10 55 ec       	movss  -0x14(%rbp),%xmm2
+  4015cc:	89 55 ec             	mov    %edx,-0x14(%rbp)
+  4015cf:	f3 0f 10 4d ec       	movss  -0x14(%rbp),%xmm1
+  4015d4:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  4015d7:	f3 0f 10 45 ec       	movss  -0x14(%rbp),%xmm0
+  4015dc:	e8 c2 fd ff ff       	callq  4013a3 <Pouce>
+  4015e1:	e8 6a fa ff ff       	callq  401050 <glPopMatrix@plt>
+  4015e6:	f3 0f 10 15 3a 18 00 	movss  0x183a(%rip),%xmm2        # 402e28 <_IO_stdin_used+0x18>
+  4015ed:	00 
+  4015ee:	f3 0f 10 0d 32 18 00 	movss  0x1832(%rip),%xmm1        # 402e28 <_IO_stdin_used+0x18>
+  4015f5:	00 
+  4015f6:	0f 57 c0             	xorps  %xmm0,%xmm0
+  4015f9:	e8 32 fa ff ff       	callq  401030 <glColor3f@plt>
+  4015fe:	f3 0f 10 45 f4       	movss  -0xc(%rbp),%xmm0
+  401603:	f3 0f 10 0d 55 18 00 	movss  0x1855(%rip),%xmm1        # 402e60 <_IO_stdin_used+0x50>
+  40160a:	00 
+  40160b:	f3 0f 5e c1          	divss  %xmm1,%xmm0
+  40160f:	0f 28 c8             	movaps %xmm0,%xmm1
+  401612:	f3 0f 10 45 f8       	movss  -0x8(%rbp),%xmm0
+  401617:	f3 0f 10 15 41 18 00 	movss  0x1841(%rip),%xmm2        # 402e60 <_IO_stdin_used+0x50>
+  40161e:	00 
+  40161f:	f3 0f 5e c2          	divss  %xmm2,%xmm0
+  401623:	0f 28 d1             	movaps %xmm1,%xmm2
+  401626:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401629:	e8 52 f9 ff ff       	callq  400f80 <glTranslatef@plt>
+  40162e:	8b 0d 70 2b 20 00    	mov    0x202b70(%rip),%ecx        # 6041a4 <angle_auriculaire_phalangine_phalangette>
+  401634:	8b 15 66 2b 20 00    	mov    0x202b66(%rip),%edx        # 6041a0 <angle_auriculaire_phalange_phalangine>
+  40163a:	8b 05 5c 2b 20 00    	mov    0x202b5c(%rip),%eax        # 60419c <angle_paume_auriculaire>
+  401640:	8b 75 fc             	mov    -0x4(%rbp),%esi
+  401643:	89 75 ec             	mov    %esi,-0x14(%rbp)
+  401646:	f3 0f 10 65 ec       	movss  -0x14(%rbp),%xmm4
+  40164b:	f3 0f 10 1d d9 17 00 	movss  0x17d9(%rip),%xmm3        # 402e2c <_IO_stdin_used+0x1c>
+  401652:	00 
+  401653:	89 4d ec             	mov    %ecx,-0x14(%rbp)
+  401656:	f3 0f 10 55 ec       	movss  -0x14(%rbp),%xmm2
+  40165b:	89 55 ec             	mov    %edx,-0x14(%rbp)
+  40165e:	f3 0f 10 4d ec       	movss  -0x14(%rbp),%xmm1
+  401663:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  401666:	f3 0f 10 45 ec       	movss  -0x14(%rbp),%xmm0
+  40166b:	e8 a2 fb ff ff       	callq  401212 <Doigt>
+  401670:	0f 57 d2             	xorps  %xmm2,%xmm2
+  401673:	f3 0f 10 0d ad 17 00 	movss  0x17ad(%rip),%xmm1        # 402e28 <_IO_stdin_used+0x18>
+  40167a:	00 
+  40167b:	f3 0f 10 05 a5 17 00 	movss  0x17a5(%rip),%xmm0        # 402e28 <_IO_stdin_used+0x18>
+  401682:	00 
+  401683:	e8 a8 f9 ff ff       	callq  401030 <glColor3f@plt>
+  401688:	f3 0f 10 4d fc       	movss  -0x4(%rbp),%xmm1
+  40168d:	f3 0f 10 05 bb 17 00 	movss  0x17bb(%rip),%xmm0        # 402e50 <_IO_stdin_used+0x40>
+  401694:	00 
+  401695:	0f 57 c1             	xorps  %xmm1,%xmm0
+  401698:	0f 14 c0             	unpcklps %xmm0,%xmm0
+  40169b:	0f 5a c0             	cvtps2pd %xmm0,%xmm0
+  40169e:	f2 0f 10 0d c2 17 00 	movsd  0x17c2(%rip),%xmm1        # 402e68 <_IO_stdin_used+0x58>
+  4016a5:	00 
+  4016a6:	f2 0f 5c c1          	subsd  %xmm1,%xmm0
+  4016aa:	66 0f 14 c0          	unpcklpd %xmm0,%xmm0
+  4016ae:	66 0f 5a c0          	cvtpd2ps %xmm0,%xmm0
+  4016b2:	0f 28 d0             	movaps %xmm0,%xmm2
+  4016b5:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4016b8:	0f 57 c0             	xorps  %xmm0,%xmm0
+  4016bb:	e8 c0 f8 ff ff       	callq  400f80 <glTranslatef@plt>
+  4016c0:	8b 0d d2 2a 20 00    	mov    0x202ad2(%rip),%ecx        # 604198 <angle_annulaire_phalangine_phalangette>
+  4016c6:	8b 15 c8 2a 20 00    	mov    0x202ac8(%rip),%edx        # 604194 <angle_annulaire_phalange_phalangine>
+  4016cc:	8b 05 be 2a 20 00    	mov    0x202abe(%rip),%eax        # 604190 <angle_paume_annulaire>
+  4016d2:	8b 75 fc             	mov    -0x4(%rbp),%esi
+  4016d5:	89 75 ec             	mov    %esi,-0x14(%rbp)
+  4016d8:	f3 0f 10 65 ec       	movss  -0x14(%rbp),%xmm4
+  4016dd:	f3 0f 10 1d 4f 17 00 	movss  0x174f(%rip),%xmm3        # 402e34 <_IO_stdin_used+0x24>
+  4016e4:	00 
+  4016e5:	89 4d ec             	mov    %ecx,-0x14(%rbp)
+  4016e8:	f3 0f 10 55 ec       	movss  -0x14(%rbp),%xmm2
+  4016ed:	89 55 ec             	mov    %edx,-0x14(%rbp)
+  4016f0:	f3 0f 10 4d ec       	movss  -0x14(%rbp),%xmm1
+  4016f5:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  4016f8:	f3 0f 10 45 ec       	movss  -0x14(%rbp),%xmm0
+  4016fd:	e8 10 fb ff ff       	callq  401212 <Doigt>
+  401702:	f3 0f 10 15 1e 17 00 	movss  0x171e(%rip),%xmm2        # 402e28 <_IO_stdin_used+0x18>
+  401709:	00 
+  40170a:	f3 0f 10 0d 16 17 00 	movss  0x1716(%rip),%xmm1        # 402e28 <_IO_stdin_used+0x18>
+  401711:	00 
+  401712:	0f 57 c0             	xorps  %xmm0,%xmm0
+  401715:	e8 16 f9 ff ff       	callq  401030 <glColor3f@plt>
+  40171a:	f3 0f 10 4d fc       	movss  -0x4(%rbp),%xmm1
+  40171f:	f3 0f 10 05 29 17 00 	movss  0x1729(%rip),%xmm0        # 402e50 <_IO_stdin_used+0x40>
+  401726:	00 
+  401727:	0f 57 c1             	xorps  %xmm1,%xmm0
+  40172a:	0f 14 c0             	unpcklps %xmm0,%xmm0
+  40172d:	0f 5a c0             	cvtps2pd %xmm0,%xmm0
+  401730:	f2 0f 10 0d 30 17 00 	movsd  0x1730(%rip),%xmm1        # 402e68 <_IO_stdin_used+0x58>
+  401737:	00 
+  401738:	f2 0f 5c c1          	subsd  %xmm1,%xmm0
+  40173c:	66 0f 14 c0          	unpcklpd %xmm0,%xmm0
+  401740:	66 0f 5a c0          	cvtpd2ps %xmm0,%xmm0
+  401744:	0f 28 d0             	movaps %xmm0,%xmm2
+  401747:	0f 57 c9             	xorps  %xmm1,%xmm1
+  40174a:	0f 57 c0             	xorps  %xmm0,%xmm0
+  40174d:	e8 2e f8 ff ff       	callq  400f80 <glTranslatef@plt>
+  401752:	8b 0d 34 2a 20 00    	mov    0x202a34(%rip),%ecx        # 60418c <angle_majeur_phalangine_phalangette>
+  401758:	8b 15 2a 2a 20 00    	mov    0x202a2a(%rip),%edx        # 604188 <angle_majeur_phalange_phalangine>
+  40175e:	8b 05 20 2a 20 00    	mov    0x202a20(%rip),%eax        # 604184 <angle_paume_majeur>
+  401764:	8b 75 fc             	mov    -0x4(%rbp),%esi
+  401767:	89 75 ec             	mov    %esi,-0x14(%rbp)
+  40176a:	f3 0f 10 65 ec       	movss  -0x14(%rbp),%xmm4
+  40176f:	f3 0f 10 1d b1 16 00 	movss  0x16b1(%rip),%xmm3        # 402e28 <_IO_stdin_used+0x18>
+  401776:	00 
+  401777:	89 4d ec             	mov    %ecx,-0x14(%rbp)
+  40177a:	f3 0f 10 55 ec       	movss  -0x14(%rbp),%xmm2
+  40177f:	89 55 ec             	mov    %edx,-0x14(%rbp)
+  401782:	f3 0f 10 4d ec       	movss  -0x14(%rbp),%xmm1
+  401787:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  40178a:	f3 0f 10 45 ec       	movss  -0x14(%rbp),%xmm0
+  40178f:	e8 7e fa ff ff       	callq  401212 <Doigt>
+  401794:	0f 57 d2             	xorps  %xmm2,%xmm2
+  401797:	f3 0f 10 0d 89 16 00 	movss  0x1689(%rip),%xmm1        # 402e28 <_IO_stdin_used+0x18>
+  40179e:	00 
+  40179f:	f3 0f 10 05 81 16 00 	movss  0x1681(%rip),%xmm0        # 402e28 <_IO_stdin_used+0x18>
+  4017a6:	00 
+  4017a7:	e8 84 f8 ff ff       	callq  401030 <glColor3f@plt>
+  4017ac:	f3 0f 10 4d fc       	movss  -0x4(%rbp),%xmm1
+  4017b1:	f3 0f 10 05 97 16 00 	movss  0x1697(%rip),%xmm0        # 402e50 <_IO_stdin_used+0x40>
+  4017b8:	00 
+  4017b9:	0f 57 c1             	xorps  %xmm1,%xmm0
+  4017bc:	0f 14 c0             	unpcklps %xmm0,%xmm0
+  4017bf:	0f 5a c0             	cvtps2pd %xmm0,%xmm0
+  4017c2:	f2 0f 10 0d 9e 16 00 	movsd  0x169e(%rip),%xmm1        # 402e68 <_IO_stdin_used+0x58>
+  4017c9:	00 
+  4017ca:	f2 0f 5c c1          	subsd  %xmm1,%xmm0
+  4017ce:	66 0f 14 c0          	unpcklpd %xmm0,%xmm0
+  4017d2:	66 0f 5a c0          	cvtpd2ps %xmm0,%xmm0
+  4017d6:	0f 28 d0             	movaps %xmm0,%xmm2
+  4017d9:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4017dc:	0f 57 c0             	xorps  %xmm0,%xmm0
+  4017df:	e8 9c f7 ff ff       	callq  400f80 <glTranslatef@plt>
+  4017e4:	8b 0d 96 29 20 00    	mov    0x202996(%rip),%ecx        # 604180 <angle_indexe_phalangine_phalangette>
+  4017ea:	8b 15 8c 29 20 00    	mov    0x20298c(%rip),%edx        # 60417c <angle_indexe_phalange_phalangine>
+  4017f0:	8b 05 82 29 20 00    	mov    0x202982(%rip),%eax        # 604178 <angle_paume_indexe>
+  4017f6:	8b 75 fc             	mov    -0x4(%rbp),%esi
+  4017f9:	89 75 ec             	mov    %esi,-0x14(%rbp)
+  4017fc:	f3 0f 10 65 ec       	movss  -0x14(%rbp),%xmm4
+  401801:	f3 0f 10 1d 67 16 00 	movss  0x1667(%rip),%xmm3        # 402e70 <_IO_stdin_used+0x60>
+  401808:	00 
+  401809:	89 4d ec             	mov    %ecx,-0x14(%rbp)
+  40180c:	f3 0f 10 55 ec       	movss  -0x14(%rbp),%xmm2
+  401811:	89 55 ec             	mov    %edx,-0x14(%rbp)
+  401814:	f3 0f 10 4d ec       	movss  -0x14(%rbp),%xmm1
+  401819:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  40181c:	f3 0f 10 45 ec       	movss  -0x14(%rbp),%xmm0
+  401821:	e8 ec f9 ff ff       	callq  401212 <Doigt>
+  401826:	e8 25 f8 ff ff       	callq  401050 <glPopMatrix@plt>
+  40182b:	e8 12 0d 00 00       	callq  402542 <axes>
+  401830:	e8 fb f5 ff ff       	callq  400e30 <glutSwapBuffers@plt>
+  401835:	c9                   	leaveq 
+  401836:	c3                   	retq   
+
+0000000000401837 <main>:
+  401837:	55                   	push   %rbp
+  401838:	48 89 e5             	mov    %rsp,%rbp
+  40183b:	48 83 ec 10          	sub    $0x10,%rsp
+  40183f:	89 7d fc             	mov    %edi,-0x4(%rbp)
+  401842:	48 89 75 f0          	mov    %rsi,-0x10(%rbp)
+  401846:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+  40184a:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  40184d:	ba ea 14 40 00       	mov    $0x4014ea,%edx
+  401852:	48 89 ce             	mov    %rcx,%rsi
+  401855:	89 c7                	mov    %eax,%edi
+  401857:	e8 52 12 00 00       	callq  402aae <notre_init>
+  40185c:	c9                   	leaveq 
+  40185d:	c3                   	retq   
+
+000000000040185e <touche_pressee>:
+  40185e:	55                   	push   %rbp
+  40185f:	48 89 e5             	mov    %rsp,%rbp
+  401862:	48 83 ec 10          	sub    $0x10,%rsp
+  401866:	89 f8                	mov    %edi,%eax
+  401868:	89 75 f8             	mov    %esi,-0x8(%rbp)
+  40186b:	89 55 f4             	mov    %edx,-0xc(%rbp)
+  40186e:	88 45 fc             	mov    %al,-0x4(%rbp)
+  401871:	bf 64 00 00 00       	mov    $0x64,%edi
+  401876:	b8 00 00 00 00       	mov    $0x0,%eax
+  40187b:	e8 f0 f6 ff ff       	callq  400f70 <usleep@plt>
+  401880:	0f b6 45 fc          	movzbl -0x4(%rbp),%eax
+  401884:	83 e8 1b             	sub    $0x1b,%eax
+  401887:	83 f8 5f             	cmp    $0x5f,%eax
+  40188a:	0f 87 9b 0c 00 00    	ja     40252b <touche_pressee+0xccd>
+  401890:	89 c0                	mov    %eax,%eax
+  401892:	48 8b 04 c5 80 2e 40 	mov    0x402e80(,%rax,8),%rax
+  401899:	00 
+  40189a:	ff e0                	jmpq   *%rax
+  40189c:	bf 01 00 00 00       	mov    $0x1,%edi
+  4018a1:	e8 0a f6 ff ff       	callq  400eb0 <exit@plt>
+  4018a6:	8b 05 d4 18 00 00    	mov    0x18d4(%rip),%eax        # 403180 <_IO_stdin_used+0x370>
+  4018ac:	89 05 b2 28 20 00    	mov    %eax,0x2028b2(%rip)        # 604164 <xrot>
+  4018b2:	8b 05 c8 18 00 00    	mov    0x18c8(%rip),%eax        # 403180 <_IO_stdin_used+0x370>
+  4018b8:	89 05 aa 28 20 00    	mov    %eax,0x2028aa(%rip)        # 604168 <yrot>
+  4018be:	e9 7d 0c 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  4018c3:	8b 05 93 28 20 00    	mov    0x202893(%rip),%eax        # 60415c <blend>
+  4018c9:	89 c7                	mov    %eax,%edi
+  4018cb:	e8 89 13 00 00       	callq  402c59 <switch_blend>
+  4018d0:	89 05 86 28 20 00    	mov    %eax,0x202886(%rip)        # 60415c <blend>
+  4018d6:	e9 65 0c 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  4018db:	8b 05 c7 28 20 00    	mov    0x2028c7(%rip),%eax        # 6041a8 <light>
+  4018e1:	89 c7                	mov    %eax,%edi
+  4018e3:	e8 be 13 00 00       	callq  402ca6 <switch_light>
+  4018e8:	89 05 ba 28 20 00    	mov    %eax,0x2028ba(%rip)        # 6041a8 <light>
+  4018ee:	e9 4d 0c 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  4018f3:	f3 0f 10 0d a1 28 20 	movss  0x2028a1(%rip),%xmm1        # 60419c <angle_paume_auriculaire>
+  4018fa:	00 
+  4018fb:	f3 0f 10 05 81 18 00 	movss  0x1881(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  401902:	00 
+  401903:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401906:	76 1c                	jbe    401924 <touche_pressee+0xc6>
+  401908:	f3 0f 10 0d 8c 28 20 	movss  0x20288c(%rip),%xmm1        # 60419c <angle_paume_auriculaire>
+  40190f:	00 
+  401910:	f3 0f 10 05 70 18 00 	movss  0x1870(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401917:	00 
+  401918:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  40191c:	f3 0f 11 05 78 28 20 	movss  %xmm0,0x202878(%rip)        # 60419c <angle_paume_auriculaire>
+  401923:	00 
+  401924:	f3 0f 10 0d 74 28 20 	movss  0x202874(%rip),%xmm1        # 6041a0 <angle_auriculaire_phalange_phalangine>
+  40192b:	00 
+  40192c:	f3 0f 10 05 50 18 00 	movss  0x1850(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  401933:	00 
+  401934:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401937:	76 1c                	jbe    401955 <touche_pressee+0xf7>
+  401939:	f3 0f 10 0d 5f 28 20 	movss  0x20285f(%rip),%xmm1        # 6041a0 <angle_auriculaire_phalange_phalangine>
+  401940:	00 
+  401941:	f3 0f 10 05 3f 18 00 	movss  0x183f(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401948:	00 
+  401949:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  40194d:	f3 0f 11 05 4b 28 20 	movss  %xmm0,0x20284b(%rip)        # 6041a0 <angle_auriculaire_phalange_phalangine>
+  401954:	00 
+  401955:	f3 0f 10 0d 47 28 20 	movss  0x202847(%rip),%xmm1        # 6041a4 <angle_auriculaire_phalangine_phalangette>
+  40195c:	00 
+  40195d:	f3 0f 10 05 1f 18 00 	movss  0x181f(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  401964:	00 
+  401965:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401968:	77 05                	ja     40196f <touche_pressee+0x111>
+  40196a:	e9 d1 0b 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  40196f:	f3 0f 10 0d 2d 28 20 	movss  0x20282d(%rip),%xmm1        # 6041a4 <angle_auriculaire_phalangine_phalangette>
+  401976:	00 
+  401977:	f3 0f 10 05 09 18 00 	movss  0x1809(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  40197e:	00 
+  40197f:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  401983:	f3 0f 11 05 19 28 20 	movss  %xmm0,0x202819(%rip)        # 6041a4 <angle_auriculaire_phalangine_phalangette>
+  40198a:	00 
+  40198b:	e9 b0 0b 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401990:	f3 0f 10 05 04 28 20 	movss  0x202804(%rip),%xmm0        # 60419c <angle_paume_auriculaire>
+  401997:	00 
+  401998:	0f 57 c9             	xorps  %xmm1,%xmm1
+  40199b:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  40199e:	7a 08                	jp     4019a8 <touche_pressee+0x14a>
+  4019a0:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4019a3:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4019a6:	74 1c                	je     4019c4 <touche_pressee+0x166>
+  4019a8:	f3 0f 10 05 ec 27 20 	movss  0x2027ec(%rip),%xmm0        # 60419c <angle_paume_auriculaire>
+  4019af:	00 
+  4019b0:	f3 0f 10 0d d0 17 00 	movss  0x17d0(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  4019b7:	00 
+  4019b8:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  4019bc:	f3 0f 11 05 d8 27 20 	movss  %xmm0,0x2027d8(%rip)        # 60419c <angle_paume_auriculaire>
+  4019c3:	00 
+  4019c4:	f3 0f 10 05 d4 27 20 	movss  0x2027d4(%rip),%xmm0        # 6041a0 <angle_auriculaire_phalange_phalangine>
+  4019cb:	00 
+  4019cc:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4019cf:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4019d2:	7a 08                	jp     4019dc <touche_pressee+0x17e>
+  4019d4:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4019d7:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4019da:	74 1c                	je     4019f8 <touche_pressee+0x19a>
+  4019dc:	f3 0f 10 05 bc 27 20 	movss  0x2027bc(%rip),%xmm0        # 6041a0 <angle_auriculaire_phalange_phalangine>
+  4019e3:	00 
+  4019e4:	f3 0f 10 0d 9c 17 00 	movss  0x179c(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  4019eb:	00 
+  4019ec:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  4019f0:	f3 0f 11 05 a8 27 20 	movss  %xmm0,0x2027a8(%rip)        # 6041a0 <angle_auriculaire_phalange_phalangine>
+  4019f7:	00 
+  4019f8:	f3 0f 10 05 a4 27 20 	movss  0x2027a4(%rip),%xmm0        # 6041a4 <angle_auriculaire_phalangine_phalangette>
+  4019ff:	00 
+  401a00:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401a03:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401a06:	7a 0d                	jp     401a15 <touche_pressee+0x1b7>
+  401a08:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401a0b:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401a0e:	75 05                	jne    401a15 <touche_pressee+0x1b7>
+  401a10:	e9 2b 0b 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401a15:	f3 0f 10 05 87 27 20 	movss  0x202787(%rip),%xmm0        # 6041a4 <angle_auriculaire_phalangine_phalangette>
+  401a1c:	00 
+  401a1d:	f3 0f 10 0d 63 17 00 	movss  0x1763(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401a24:	00 
+  401a25:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401a29:	f3 0f 11 05 73 27 20 	movss  %xmm0,0x202773(%rip)        # 6041a4 <angle_auriculaire_phalangine_phalangette>
+  401a30:	00 
+  401a31:	e9 0a 0b 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401a36:	f3 0f 10 0d 52 27 20 	movss  0x202752(%rip),%xmm1        # 604190 <angle_paume_annulaire>
+  401a3d:	00 
+  401a3e:	f3 0f 10 05 3e 17 00 	movss  0x173e(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  401a45:	00 
+  401a46:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401a49:	76 1c                	jbe    401a67 <touche_pressee+0x209>
+  401a4b:	f3 0f 10 0d 3d 27 20 	movss  0x20273d(%rip),%xmm1        # 604190 <angle_paume_annulaire>
+  401a52:	00 
+  401a53:	f3 0f 10 05 2d 17 00 	movss  0x172d(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401a5a:	00 
+  401a5b:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  401a5f:	f3 0f 11 05 29 27 20 	movss  %xmm0,0x202729(%rip)        # 604190 <angle_paume_annulaire>
+  401a66:	00 
+  401a67:	f3 0f 10 0d 19 27 20 	movss  0x202719(%rip),%xmm1        # 604188 <angle_majeur_phalange_phalangine>
+  401a6e:	00 
+  401a6f:	f3 0f 10 05 0d 17 00 	movss  0x170d(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  401a76:	00 
+  401a77:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401a7a:	76 1c                	jbe    401a98 <touche_pressee+0x23a>
+  401a7c:	f3 0f 10 0d 10 27 20 	movss  0x202710(%rip),%xmm1        # 604194 <angle_annulaire_phalange_phalangine>
+  401a83:	00 
+  401a84:	f3 0f 10 05 fc 16 00 	movss  0x16fc(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401a8b:	00 
+  401a8c:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  401a90:	f3 0f 11 05 fc 26 20 	movss  %xmm0,0x2026fc(%rip)        # 604194 <angle_annulaire_phalange_phalangine>
+  401a97:	00 
+  401a98:	f3 0f 10 0d f8 26 20 	movss  0x2026f8(%rip),%xmm1        # 604198 <angle_annulaire_phalangine_phalangette>
+  401a9f:	00 
+  401aa0:	f3 0f 10 05 dc 16 00 	movss  0x16dc(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  401aa7:	00 
+  401aa8:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401aab:	77 05                	ja     401ab2 <touche_pressee+0x254>
+  401aad:	e9 8e 0a 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401ab2:	f3 0f 10 0d de 26 20 	movss  0x2026de(%rip),%xmm1        # 604198 <angle_annulaire_phalangine_phalangette>
+  401ab9:	00 
+  401aba:	f3 0f 10 05 c6 16 00 	movss  0x16c6(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401ac1:	00 
+  401ac2:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  401ac6:	f3 0f 11 05 ca 26 20 	movss  %xmm0,0x2026ca(%rip)        # 604198 <angle_annulaire_phalangine_phalangette>
+  401acd:	00 
+  401ace:	e9 6d 0a 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401ad3:	f3 0f 10 05 b5 26 20 	movss  0x2026b5(%rip),%xmm0        # 604190 <angle_paume_annulaire>
+  401ada:	00 
+  401adb:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401ade:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401ae1:	7a 08                	jp     401aeb <touche_pressee+0x28d>
+  401ae3:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401ae6:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401ae9:	74 1c                	je     401b07 <touche_pressee+0x2a9>
+  401aeb:	f3 0f 10 05 9d 26 20 	movss  0x20269d(%rip),%xmm0        # 604190 <angle_paume_annulaire>
+  401af2:	00 
+  401af3:	f3 0f 10 0d 8d 16 00 	movss  0x168d(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401afa:	00 
+  401afb:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401aff:	f3 0f 11 05 89 26 20 	movss  %xmm0,0x202689(%rip)        # 604190 <angle_paume_annulaire>
+  401b06:	00 
+  401b07:	f3 0f 10 05 85 26 20 	movss  0x202685(%rip),%xmm0        # 604194 <angle_annulaire_phalange_phalangine>
+  401b0e:	00 
+  401b0f:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401b12:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401b15:	7a 08                	jp     401b1f <touche_pressee+0x2c1>
+  401b17:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401b1a:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401b1d:	74 1c                	je     401b3b <touche_pressee+0x2dd>
+  401b1f:	f3 0f 10 05 6d 26 20 	movss  0x20266d(%rip),%xmm0        # 604194 <angle_annulaire_phalange_phalangine>
+  401b26:	00 
+  401b27:	f3 0f 10 0d 59 16 00 	movss  0x1659(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401b2e:	00 
+  401b2f:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401b33:	f3 0f 11 05 59 26 20 	movss  %xmm0,0x202659(%rip)        # 604194 <angle_annulaire_phalange_phalangine>
+  401b3a:	00 
+  401b3b:	f3 0f 10 05 55 26 20 	movss  0x202655(%rip),%xmm0        # 604198 <angle_annulaire_phalangine_phalangette>
+  401b42:	00 
+  401b43:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401b46:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401b49:	7a 0d                	jp     401b58 <touche_pressee+0x2fa>
+  401b4b:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401b4e:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401b51:	75 05                	jne    401b58 <touche_pressee+0x2fa>
+  401b53:	e9 e8 09 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401b58:	f3 0f 10 05 38 26 20 	movss  0x202638(%rip),%xmm0        # 604198 <angle_annulaire_phalangine_phalangette>
+  401b5f:	00 
+  401b60:	f3 0f 10 0d 20 16 00 	movss  0x1620(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401b67:	00 
+  401b68:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401b6c:	f3 0f 11 05 24 26 20 	movss  %xmm0,0x202624(%rip)        # 604198 <angle_annulaire_phalangine_phalangette>
+  401b73:	00 
+  401b74:	e9 c7 09 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401b79:	f3 0f 10 0d 03 26 20 	movss  0x202603(%rip),%xmm1        # 604184 <angle_paume_majeur>
+  401b80:	00 
+  401b81:	f3 0f 10 05 fb 15 00 	movss  0x15fb(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  401b88:	00 
+  401b89:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401b8c:	76 1c                	jbe    401baa <touche_pressee+0x34c>
+  401b8e:	f3 0f 10 0d ee 25 20 	movss  0x2025ee(%rip),%xmm1        # 604184 <angle_paume_majeur>
+  401b95:	00 
+  401b96:	f3 0f 10 05 ea 15 00 	movss  0x15ea(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401b9d:	00 
+  401b9e:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  401ba2:	f3 0f 11 05 da 25 20 	movss  %xmm0,0x2025da(%rip)        # 604184 <angle_paume_majeur>
+  401ba9:	00 
+  401baa:	f3 0f 10 0d d6 25 20 	movss  0x2025d6(%rip),%xmm1        # 604188 <angle_majeur_phalange_phalangine>
+  401bb1:	00 
+  401bb2:	f3 0f 10 05 ca 15 00 	movss  0x15ca(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  401bb9:	00 
+  401bba:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401bbd:	76 1c                	jbe    401bdb <touche_pressee+0x37d>
+  401bbf:	f3 0f 10 0d c1 25 20 	movss  0x2025c1(%rip),%xmm1        # 604188 <angle_majeur_phalange_phalangine>
+  401bc6:	00 
+  401bc7:	f3 0f 10 05 b9 15 00 	movss  0x15b9(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401bce:	00 
+  401bcf:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  401bd3:	f3 0f 11 05 ad 25 20 	movss  %xmm0,0x2025ad(%rip)        # 604188 <angle_majeur_phalange_phalangine>
+  401bda:	00 
+  401bdb:	f3 0f 10 0d a9 25 20 	movss  0x2025a9(%rip),%xmm1        # 60418c <angle_majeur_phalangine_phalangette>
+  401be2:	00 
+  401be3:	f3 0f 10 05 99 15 00 	movss  0x1599(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  401bea:	00 
+  401beb:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401bee:	77 05                	ja     401bf5 <touche_pressee+0x397>
+  401bf0:	e9 4b 09 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401bf5:	f3 0f 10 0d 8f 25 20 	movss  0x20258f(%rip),%xmm1        # 60418c <angle_majeur_phalangine_phalangette>
+  401bfc:	00 
+  401bfd:	f3 0f 10 05 83 15 00 	movss  0x1583(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401c04:	00 
+  401c05:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  401c09:	f3 0f 11 05 7b 25 20 	movss  %xmm0,0x20257b(%rip)        # 60418c <angle_majeur_phalangine_phalangette>
+  401c10:	00 
+  401c11:	e9 2a 09 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401c16:	f3 0f 10 05 66 25 20 	movss  0x202566(%rip),%xmm0        # 604184 <angle_paume_majeur>
+  401c1d:	00 
+  401c1e:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401c21:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401c24:	7a 08                	jp     401c2e <touche_pressee+0x3d0>
+  401c26:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401c29:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401c2c:	74 1c                	je     401c4a <touche_pressee+0x3ec>
+  401c2e:	f3 0f 10 05 4e 25 20 	movss  0x20254e(%rip),%xmm0        # 604184 <angle_paume_majeur>
+  401c35:	00 
+  401c36:	f3 0f 10 0d 4a 15 00 	movss  0x154a(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401c3d:	00 
+  401c3e:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401c42:	f3 0f 11 05 3a 25 20 	movss  %xmm0,0x20253a(%rip)        # 604184 <angle_paume_majeur>
+  401c49:	00 
+  401c4a:	f3 0f 10 05 36 25 20 	movss  0x202536(%rip),%xmm0        # 604188 <angle_majeur_phalange_phalangine>
+  401c51:	00 
+  401c52:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401c55:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401c58:	7a 08                	jp     401c62 <touche_pressee+0x404>
+  401c5a:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401c5d:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401c60:	74 1c                	je     401c7e <touche_pressee+0x420>
+  401c62:	f3 0f 10 05 1e 25 20 	movss  0x20251e(%rip),%xmm0        # 604188 <angle_majeur_phalange_phalangine>
+  401c69:	00 
+  401c6a:	f3 0f 10 0d 16 15 00 	movss  0x1516(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401c71:	00 
+  401c72:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401c76:	f3 0f 11 05 0a 25 20 	movss  %xmm0,0x20250a(%rip)        # 604188 <angle_majeur_phalange_phalangine>
+  401c7d:	00 
+  401c7e:	f3 0f 10 05 06 25 20 	movss  0x202506(%rip),%xmm0        # 60418c <angle_majeur_phalangine_phalangette>
+  401c85:	00 
+  401c86:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401c89:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401c8c:	7a 0d                	jp     401c9b <touche_pressee+0x43d>
+  401c8e:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401c91:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401c94:	75 05                	jne    401c9b <touche_pressee+0x43d>
+  401c96:	e9 a5 08 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401c9b:	f3 0f 10 05 e9 24 20 	movss  0x2024e9(%rip),%xmm0        # 60418c <angle_majeur_phalangine_phalangette>
+  401ca2:	00 
+  401ca3:	f3 0f 10 0d dd 14 00 	movss  0x14dd(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401caa:	00 
+  401cab:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401caf:	f3 0f 11 05 d5 24 20 	movss  %xmm0,0x2024d5(%rip)        # 60418c <angle_majeur_phalangine_phalangette>
+  401cb6:	00 
+  401cb7:	e9 84 08 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401cbc:	f3 0f 10 0d b4 24 20 	movss  0x2024b4(%rip),%xmm1        # 604178 <angle_paume_indexe>
+  401cc3:	00 
+  401cc4:	f3 0f 10 05 b8 14 00 	movss  0x14b8(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  401ccb:	00 
+  401ccc:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401ccf:	76 1c                	jbe    401ced <touche_pressee+0x48f>
+  401cd1:	f3 0f 10 0d 9f 24 20 	movss  0x20249f(%rip),%xmm1        # 604178 <angle_paume_indexe>
+  401cd8:	00 
+  401cd9:	f3 0f 10 05 a7 14 00 	movss  0x14a7(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401ce0:	00 
+  401ce1:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  401ce5:	f3 0f 11 05 8b 24 20 	movss  %xmm0,0x20248b(%rip)        # 604178 <angle_paume_indexe>
+  401cec:	00 
+  401ced:	f3 0f 10 0d 87 24 20 	movss  0x202487(%rip),%xmm1        # 60417c <angle_indexe_phalange_phalangine>
+  401cf4:	00 
+  401cf5:	f3 0f 10 05 87 14 00 	movss  0x1487(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  401cfc:	00 
+  401cfd:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401d00:	76 1c                	jbe    401d1e <touche_pressee+0x4c0>
+  401d02:	f3 0f 10 0d 72 24 20 	movss  0x202472(%rip),%xmm1        # 60417c <angle_indexe_phalange_phalangine>
+  401d09:	00 
+  401d0a:	f3 0f 10 05 76 14 00 	movss  0x1476(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401d11:	00 
+  401d12:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  401d16:	f3 0f 11 05 5e 24 20 	movss  %xmm0,0x20245e(%rip)        # 60417c <angle_indexe_phalange_phalangine>
+  401d1d:	00 
+  401d1e:	f3 0f 10 0d 5a 24 20 	movss  0x20245a(%rip),%xmm1        # 604180 <angle_indexe_phalangine_phalangette>
+  401d25:	00 
+  401d26:	f3 0f 10 05 56 14 00 	movss  0x1456(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  401d2d:	00 
+  401d2e:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401d31:	77 05                	ja     401d38 <touche_pressee+0x4da>
+  401d33:	e9 08 08 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401d38:	f3 0f 10 0d 40 24 20 	movss  0x202440(%rip),%xmm1        # 604180 <angle_indexe_phalangine_phalangette>
+  401d3f:	00 
+  401d40:	f3 0f 10 05 40 14 00 	movss  0x1440(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401d47:	00 
+  401d48:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  401d4c:	f3 0f 11 05 2c 24 20 	movss  %xmm0,0x20242c(%rip)        # 604180 <angle_indexe_phalangine_phalangette>
+  401d53:	00 
+  401d54:	e9 e7 07 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401d59:	f3 0f 10 05 1b 24 20 	movss  0x20241b(%rip),%xmm0        # 60417c <angle_indexe_phalange_phalangine>
+  401d60:	00 
+  401d61:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401d64:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401d67:	7a 08                	jp     401d71 <touche_pressee+0x513>
+  401d69:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401d6c:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401d6f:	74 1c                	je     401d8d <touche_pressee+0x52f>
+  401d71:	f3 0f 10 05 ff 23 20 	movss  0x2023ff(%rip),%xmm0        # 604178 <angle_paume_indexe>
+  401d78:	00 
+  401d79:	f3 0f 10 0d 07 14 00 	movss  0x1407(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401d80:	00 
+  401d81:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401d85:	f3 0f 11 05 eb 23 20 	movss  %xmm0,0x2023eb(%rip)        # 604178 <angle_paume_indexe>
+  401d8c:	00 
+  401d8d:	f3 0f 10 05 db 23 20 	movss  0x2023db(%rip),%xmm0        # 604170 <angle_pouce_phalange_phalangine>
+  401d94:	00 
+  401d95:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401d98:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401d9b:	7a 08                	jp     401da5 <touche_pressee+0x547>
+  401d9d:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401da0:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401da3:	74 1c                	je     401dc1 <touche_pressee+0x563>
+  401da5:	f3 0f 10 05 cf 23 20 	movss  0x2023cf(%rip),%xmm0        # 60417c <angle_indexe_phalange_phalangine>
+  401dac:	00 
+  401dad:	f3 0f 10 0d d3 13 00 	movss  0x13d3(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401db4:	00 
+  401db5:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401db9:	f3 0f 11 05 bb 23 20 	movss  %xmm0,0x2023bb(%rip)        # 60417c <angle_indexe_phalange_phalangine>
+  401dc0:	00 
+  401dc1:	f3 0f 10 05 ab 23 20 	movss  0x2023ab(%rip),%xmm0        # 604174 <angle_pouce_phalangine_phalangette>
+  401dc8:	00 
+  401dc9:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401dcc:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401dcf:	7a 0d                	jp     401dde <touche_pressee+0x580>
+  401dd1:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401dd4:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401dd7:	75 05                	jne    401dde <touche_pressee+0x580>
+  401dd9:	e9 62 07 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401dde:	f3 0f 10 05 9a 23 20 	movss  0x20239a(%rip),%xmm0        # 604180 <angle_indexe_phalangine_phalangette>
+  401de5:	00 
+  401de6:	f3 0f 10 0d 9a 13 00 	movss  0x139a(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401ded:	00 
+  401dee:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401df2:	f3 0f 11 05 86 23 20 	movss  %xmm0,0x202386(%rip)        # 604180 <angle_indexe_phalangine_phalangette>
+  401df9:	00 
+  401dfa:	e9 41 07 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401dff:	f3 0f 10 0d 65 23 20 	movss  0x202365(%rip),%xmm1        # 60416c <angle_paume_pouce>
+  401e06:	00 
+  401e07:	f3 0f 10 05 7d 13 00 	movss  0x137d(%rip),%xmm0        # 40318c <_IO_stdin_used+0x37c>
+  401e0e:	00 
+  401e0f:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401e12:	76 1c                	jbe    401e30 <touche_pressee+0x5d2>
+  401e14:	f3 0f 10 0d 50 23 20 	movss  0x202350(%rip),%xmm1        # 60416c <angle_paume_pouce>
+  401e1b:	00 
+  401e1c:	f3 0f 10 05 64 13 00 	movss  0x1364(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401e23:	00 
+  401e24:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  401e28:	f3 0f 11 05 3c 23 20 	movss  %xmm0,0x20233c(%rip)        # 60416c <angle_paume_pouce>
+  401e2f:	00 
+  401e30:	f3 0f 10 05 38 23 20 	movss  0x202338(%rip),%xmm0        # 604170 <angle_pouce_phalange_phalangine>
+  401e37:	00 
+  401e38:	0f 2e 05 51 13 00 00 	ucomiss 0x1351(%rip),%xmm0        # 403190 <_IO_stdin_used+0x380>
+  401e3f:	76 1c                	jbe    401e5d <touche_pressee+0x5ff>
+  401e41:	f3 0f 10 05 27 23 20 	movss  0x202327(%rip),%xmm0        # 604170 <angle_pouce_phalange_phalangine>
+  401e48:	00 
+  401e49:	f3 0f 10 0d 37 13 00 	movss  0x1337(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401e50:	00 
+  401e51:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401e55:	f3 0f 11 05 13 23 20 	movss  %xmm0,0x202313(%rip)        # 604170 <angle_pouce_phalange_phalangine>
+  401e5c:	00 
+  401e5d:	f3 0f 10 05 0f 23 20 	movss  0x20230f(%rip),%xmm0        # 604174 <angle_pouce_phalangine_phalangette>
+  401e64:	00 
+  401e65:	0f 2e 05 24 13 00 00 	ucomiss 0x1324(%rip),%xmm0        # 403190 <_IO_stdin_used+0x380>
+  401e6c:	77 05                	ja     401e73 <touche_pressee+0x615>
+  401e6e:	e9 cd 06 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401e73:	f3 0f 10 05 f9 22 20 	movss  0x2022f9(%rip),%xmm0        # 604174 <angle_pouce_phalangine_phalangette>
+  401e7a:	00 
+  401e7b:	f3 0f 10 0d 05 13 00 	movss  0x1305(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401e82:	00 
+  401e83:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401e87:	f3 0f 11 05 e5 22 20 	movss  %xmm0,0x2022e5(%rip)        # 604174 <angle_pouce_phalangine_phalangette>
+  401e8e:	00 
+  401e8f:	e9 ac 06 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401e94:	f3 0f 10 05 d0 22 20 	movss  0x2022d0(%rip),%xmm0        # 60416c <angle_paume_pouce>
+  401e9b:	00 
+  401e9c:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401e9f:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401ea2:	7a 08                	jp     401eac <touche_pressee+0x64e>
+  401ea4:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401ea7:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401eaa:	74 1c                	je     401ec8 <touche_pressee+0x66a>
+  401eac:	f3 0f 10 05 b8 22 20 	movss  0x2022b8(%rip),%xmm0        # 60416c <angle_paume_pouce>
+  401eb3:	00 
+  401eb4:	f3 0f 10 0d cc 12 00 	movss  0x12cc(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401ebb:	00 
+  401ebc:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401ec0:	f3 0f 11 05 a4 22 20 	movss  %xmm0,0x2022a4(%rip)        # 60416c <angle_paume_pouce>
+  401ec7:	00 
+  401ec8:	f3 0f 10 05 a0 22 20 	movss  0x2022a0(%rip),%xmm0        # 604170 <angle_pouce_phalange_phalangine>
+  401ecf:	00 
+  401ed0:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401ed3:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401ed6:	7a 08                	jp     401ee0 <touche_pressee+0x682>
+  401ed8:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401edb:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401ede:	74 1c                	je     401efc <touche_pressee+0x69e>
+  401ee0:	f3 0f 10 0d 88 22 20 	movss  0x202288(%rip),%xmm1        # 604170 <angle_pouce_phalange_phalangine>
+  401ee7:	00 
+  401ee8:	f3 0f 10 05 98 12 00 	movss  0x1298(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401eef:	00 
+  401ef0:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  401ef4:	f3 0f 11 05 74 22 20 	movss  %xmm0,0x202274(%rip)        # 604170 <angle_pouce_phalange_phalangine>
+  401efb:	00 
+  401efc:	f3 0f 10 05 70 22 20 	movss  0x202270(%rip),%xmm0        # 604174 <angle_pouce_phalangine_phalangette>
+  401f03:	00 
+  401f04:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401f07:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401f0a:	7a 0d                	jp     401f19 <touche_pressee+0x6bb>
+  401f0c:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401f0f:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401f12:	75 05                	jne    401f19 <touche_pressee+0x6bb>
+  401f14:	e9 27 06 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401f19:	f3 0f 10 0d 53 22 20 	movss  0x202253(%rip),%xmm1        # 604174 <angle_pouce_phalangine_phalangette>
+  401f20:	00 
+  401f21:	f3 0f 10 05 5f 12 00 	movss  0x125f(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  401f28:	00 
+  401f29:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  401f2d:	f3 0f 11 05 3f 22 20 	movss  %xmm0,0x20223f(%rip)        # 604174 <angle_pouce_phalangine_phalangette>
+  401f34:	00 
+  401f35:	e9 06 06 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  401f3a:	f3 0f 10 05 5a 22 20 	movss  0x20225a(%rip),%xmm0        # 60419c <angle_paume_auriculaire>
+  401f41:	00 
+  401f42:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401f45:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401f48:	7a 08                	jp     401f52 <touche_pressee+0x6f4>
+  401f4a:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401f4d:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401f50:	74 1c                	je     401f6e <touche_pressee+0x710>
+  401f52:	f3 0f 10 05 42 22 20 	movss  0x202242(%rip),%xmm0        # 60419c <angle_paume_auriculaire>
+  401f59:	00 
+  401f5a:	f3 0f 10 0d 26 12 00 	movss  0x1226(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401f61:	00 
+  401f62:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401f66:	f3 0f 11 05 2e 22 20 	movss  %xmm0,0x20222e(%rip)        # 60419c <angle_paume_auriculaire>
+  401f6d:	00 
+  401f6e:	f3 0f 10 05 2a 22 20 	movss  0x20222a(%rip),%xmm0        # 6041a0 <angle_auriculaire_phalange_phalangine>
+  401f75:	00 
+  401f76:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401f79:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401f7c:	7a 08                	jp     401f86 <touche_pressee+0x728>
+  401f7e:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401f81:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401f84:	74 1c                	je     401fa2 <touche_pressee+0x744>
+  401f86:	f3 0f 10 05 12 22 20 	movss  0x202212(%rip),%xmm0        # 6041a0 <angle_auriculaire_phalange_phalangine>
+  401f8d:	00 
+  401f8e:	f3 0f 10 0d f2 11 00 	movss  0x11f2(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401f95:	00 
+  401f96:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401f9a:	f3 0f 11 05 fe 21 20 	movss  %xmm0,0x2021fe(%rip)        # 6041a0 <angle_auriculaire_phalange_phalangine>
+  401fa1:	00 
+  401fa2:	f3 0f 10 05 fa 21 20 	movss  0x2021fa(%rip),%xmm0        # 6041a4 <angle_auriculaire_phalangine_phalangette>
+  401fa9:	00 
+  401faa:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401fad:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401fb0:	7a 08                	jp     401fba <touche_pressee+0x75c>
+  401fb2:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401fb5:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401fb8:	74 1c                	je     401fd6 <touche_pressee+0x778>
+  401fba:	f3 0f 10 05 e2 21 20 	movss  0x2021e2(%rip),%xmm0        # 6041a4 <angle_auriculaire_phalangine_phalangette>
+  401fc1:	00 
+  401fc2:	f3 0f 10 0d be 11 00 	movss  0x11be(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401fc9:	00 
+  401fca:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  401fce:	f3 0f 11 05 ce 21 20 	movss  %xmm0,0x2021ce(%rip)        # 6041a4 <angle_auriculaire_phalangine_phalangette>
+  401fd5:	00 
+  401fd6:	f3 0f 10 05 b2 21 20 	movss  0x2021b2(%rip),%xmm0        # 604190 <angle_paume_annulaire>
+  401fdd:	00 
+  401fde:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401fe1:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401fe4:	7a 08                	jp     401fee <touche_pressee+0x790>
+  401fe6:	0f 57 c9             	xorps  %xmm1,%xmm1
+  401fe9:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  401fec:	74 1c                	je     40200a <touche_pressee+0x7ac>
+  401fee:	f3 0f 10 05 9a 21 20 	movss  0x20219a(%rip),%xmm0        # 604190 <angle_paume_annulaire>
+  401ff5:	00 
+  401ff6:	f3 0f 10 0d 8a 11 00 	movss  0x118a(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  401ffd:	00 
+  401ffe:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  402002:	f3 0f 11 05 86 21 20 	movss  %xmm0,0x202186(%rip)        # 604190 <angle_paume_annulaire>
+  402009:	00 
+  40200a:	f3 0f 10 05 82 21 20 	movss  0x202182(%rip),%xmm0        # 604194 <angle_annulaire_phalange_phalangine>
+  402011:	00 
+  402012:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402015:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402018:	7a 08                	jp     402022 <touche_pressee+0x7c4>
+  40201a:	0f 57 c9             	xorps  %xmm1,%xmm1
+  40201d:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402020:	74 1c                	je     40203e <touche_pressee+0x7e0>
+  402022:	f3 0f 10 05 6a 21 20 	movss  0x20216a(%rip),%xmm0        # 604194 <angle_annulaire_phalange_phalangine>
+  402029:	00 
+  40202a:	f3 0f 10 0d 56 11 00 	movss  0x1156(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  402031:	00 
+  402032:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  402036:	f3 0f 11 05 56 21 20 	movss  %xmm0,0x202156(%rip)        # 604194 <angle_annulaire_phalange_phalangine>
+  40203d:	00 
+  40203e:	f3 0f 10 05 52 21 20 	movss  0x202152(%rip),%xmm0        # 604198 <angle_annulaire_phalangine_phalangette>
+  402045:	00 
+  402046:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402049:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  40204c:	7a 08                	jp     402056 <touche_pressee+0x7f8>
+  40204e:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402051:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402054:	74 1c                	je     402072 <touche_pressee+0x814>
+  402056:	f3 0f 10 05 3a 21 20 	movss  0x20213a(%rip),%xmm0        # 604198 <angle_annulaire_phalangine_phalangette>
+  40205d:	00 
+  40205e:	f3 0f 10 0d 22 11 00 	movss  0x1122(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  402065:	00 
+  402066:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  40206a:	f3 0f 11 05 26 21 20 	movss  %xmm0,0x202126(%rip)        # 604198 <angle_annulaire_phalangine_phalangette>
+  402071:	00 
+  402072:	f3 0f 10 05 0a 21 20 	movss  0x20210a(%rip),%xmm0        # 604184 <angle_paume_majeur>
+  402079:	00 
+  40207a:	0f 57 c9             	xorps  %xmm1,%xmm1
+  40207d:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402080:	7a 08                	jp     40208a <touche_pressee+0x82c>
+  402082:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402085:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402088:	74 1c                	je     4020a6 <touche_pressee+0x848>
+  40208a:	f3 0f 10 05 f2 20 20 	movss  0x2020f2(%rip),%xmm0        # 604184 <angle_paume_majeur>
+  402091:	00 
+  402092:	f3 0f 10 0d ee 10 00 	movss  0x10ee(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  402099:	00 
+  40209a:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  40209e:	f3 0f 11 05 de 20 20 	movss  %xmm0,0x2020de(%rip)        # 604184 <angle_paume_majeur>
+  4020a5:	00 
+  4020a6:	f3 0f 10 05 da 20 20 	movss  0x2020da(%rip),%xmm0        # 604188 <angle_majeur_phalange_phalangine>
+  4020ad:	00 
+  4020ae:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4020b1:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4020b4:	7a 08                	jp     4020be <touche_pressee+0x860>
+  4020b6:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4020b9:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4020bc:	74 1c                	je     4020da <touche_pressee+0x87c>
+  4020be:	f3 0f 10 05 c2 20 20 	movss  0x2020c2(%rip),%xmm0        # 604188 <angle_majeur_phalange_phalangine>
+  4020c5:	00 
+  4020c6:	f3 0f 10 0d ba 10 00 	movss  0x10ba(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  4020cd:	00 
+  4020ce:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  4020d2:	f3 0f 11 05 ae 20 20 	movss  %xmm0,0x2020ae(%rip)        # 604188 <angle_majeur_phalange_phalangine>
+  4020d9:	00 
+  4020da:	f3 0f 10 05 aa 20 20 	movss  0x2020aa(%rip),%xmm0        # 60418c <angle_majeur_phalangine_phalangette>
+  4020e1:	00 
+  4020e2:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4020e5:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4020e8:	7a 08                	jp     4020f2 <touche_pressee+0x894>
+  4020ea:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4020ed:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4020f0:	74 1c                	je     40210e <touche_pressee+0x8b0>
+  4020f2:	f3 0f 10 05 92 20 20 	movss  0x202092(%rip),%xmm0        # 60418c <angle_majeur_phalangine_phalangette>
+  4020f9:	00 
+  4020fa:	f3 0f 10 0d 86 10 00 	movss  0x1086(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  402101:	00 
+  402102:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  402106:	f3 0f 11 05 7e 20 20 	movss  %xmm0,0x20207e(%rip)        # 60418c <angle_majeur_phalangine_phalangette>
+  40210d:	00 
+  40210e:	f3 0f 10 05 62 20 20 	movss  0x202062(%rip),%xmm0        # 604178 <angle_paume_indexe>
+  402115:	00 
+  402116:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402119:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  40211c:	7a 08                	jp     402126 <touche_pressee+0x8c8>
+  40211e:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402121:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402124:	74 1c                	je     402142 <touche_pressee+0x8e4>
+  402126:	f3 0f 10 05 4a 20 20 	movss  0x20204a(%rip),%xmm0        # 604178 <angle_paume_indexe>
+  40212d:	00 
+  40212e:	f3 0f 10 0d 52 10 00 	movss  0x1052(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  402135:	00 
+  402136:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  40213a:	f3 0f 11 05 36 20 20 	movss  %xmm0,0x202036(%rip)        # 604178 <angle_paume_indexe>
+  402141:	00 
+  402142:	f3 0f 10 05 32 20 20 	movss  0x202032(%rip),%xmm0        # 60417c <angle_indexe_phalange_phalangine>
+  402149:	00 
+  40214a:	0f 57 c9             	xorps  %xmm1,%xmm1
+  40214d:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402150:	7a 08                	jp     40215a <touche_pressee+0x8fc>
+  402152:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402155:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402158:	74 1c                	je     402176 <touche_pressee+0x918>
+  40215a:	f3 0f 10 05 1a 20 20 	movss  0x20201a(%rip),%xmm0        # 60417c <angle_indexe_phalange_phalangine>
+  402161:	00 
+  402162:	f3 0f 10 0d 1e 10 00 	movss  0x101e(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  402169:	00 
+  40216a:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  40216e:	f3 0f 11 05 06 20 20 	movss  %xmm0,0x202006(%rip)        # 60417c <angle_indexe_phalange_phalangine>
+  402175:	00 
+  402176:	f3 0f 10 05 02 20 20 	movss  0x202002(%rip),%xmm0        # 604180 <angle_indexe_phalangine_phalangette>
+  40217d:	00 
+  40217e:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402181:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402184:	7a 08                	jp     40218e <touche_pressee+0x930>
+  402186:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402189:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  40218c:	74 1c                	je     4021aa <touche_pressee+0x94c>
+  40218e:	f3 0f 10 05 ea 1f 20 	movss  0x201fea(%rip),%xmm0        # 604180 <angle_indexe_phalangine_phalangette>
+  402195:	00 
+  402196:	f3 0f 10 0d ea 0f 00 	movss  0xfea(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  40219d:	00 
+  40219e:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  4021a2:	f3 0f 11 05 d6 1f 20 	movss  %xmm0,0x201fd6(%rip)        # 604180 <angle_indexe_phalangine_phalangette>
+  4021a9:	00 
+  4021aa:	f3 0f 10 05 ba 1f 20 	movss  0x201fba(%rip),%xmm0        # 60416c <angle_paume_pouce>
+  4021b1:	00 
+  4021b2:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4021b5:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4021b8:	7a 08                	jp     4021c2 <touche_pressee+0x964>
+  4021ba:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4021bd:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4021c0:	74 1c                	je     4021de <touche_pressee+0x980>
+  4021c2:	f3 0f 10 05 a2 1f 20 	movss  0x201fa2(%rip),%xmm0        # 60416c <angle_paume_pouce>
+  4021c9:	00 
+  4021ca:	f3 0f 10 0d b6 0f 00 	movss  0xfb6(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  4021d1:	00 
+  4021d2:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  4021d6:	f3 0f 11 05 8e 1f 20 	movss  %xmm0,0x201f8e(%rip)        # 60416c <angle_paume_pouce>
+  4021dd:	00 
+  4021de:	f3 0f 10 05 8a 1f 20 	movss  0x201f8a(%rip),%xmm0        # 604170 <angle_pouce_phalange_phalangine>
+  4021e5:	00 
+  4021e6:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4021e9:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4021ec:	7a 08                	jp     4021f6 <touche_pressee+0x998>
+  4021ee:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4021f1:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4021f4:	74 1c                	je     402212 <touche_pressee+0x9b4>
+  4021f6:	f3 0f 10 0d 72 1f 20 	movss  0x201f72(%rip),%xmm1        # 604170 <angle_pouce_phalange_phalangine>
+  4021fd:	00 
+  4021fe:	f3 0f 10 05 82 0f 00 	movss  0xf82(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  402205:	00 
+  402206:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  40220a:	f3 0f 11 05 5e 1f 20 	movss  %xmm0,0x201f5e(%rip)        # 604170 <angle_pouce_phalange_phalangine>
+  402211:	00 
+  402212:	f3 0f 10 05 5a 1f 20 	movss  0x201f5a(%rip),%xmm0        # 604174 <angle_pouce_phalangine_phalangette>
+  402219:	00 
+  40221a:	0f 57 c9             	xorps  %xmm1,%xmm1
+  40221d:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402220:	7a 0d                	jp     40222f <touche_pressee+0x9d1>
+  402222:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402225:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402228:	75 05                	jne    40222f <touche_pressee+0x9d1>
+  40222a:	e9 11 03 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  40222f:	f3 0f 10 0d 3d 1f 20 	movss  0x201f3d(%rip),%xmm1        # 604174 <angle_pouce_phalangine_phalangette>
+  402236:	00 
+  402237:	f3 0f 10 05 49 0f 00 	movss  0xf49(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  40223e:	00 
+  40223f:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  402243:	f3 0f 11 05 29 1f 20 	movss  %xmm0,0x201f29(%rip)        # 604174 <angle_pouce_phalangine_phalangette>
+  40224a:	00 
+  40224b:	e9 f0 02 00 00       	jmpq   402540 <touche_pressee+0xce2>
+  402250:	f3 0f 10 0d 44 1f 20 	movss  0x201f44(%rip),%xmm1        # 60419c <angle_paume_auriculaire>
+  402257:	00 
+  402258:	f3 0f 10 05 24 0f 00 	movss  0xf24(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  40225f:	00 
+  402260:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402263:	76 1c                	jbe    402281 <touche_pressee+0xa23>
+  402265:	f3 0f 10 0d 2f 1f 20 	movss  0x201f2f(%rip),%xmm1        # 60419c <angle_paume_auriculaire>
+  40226c:	00 
+  40226d:	f3 0f 10 05 13 0f 00 	movss  0xf13(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  402274:	00 
+  402275:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  402279:	f3 0f 11 05 1b 1f 20 	movss  %xmm0,0x201f1b(%rip)        # 60419c <angle_paume_auriculaire>
+  402280:	00 
+  402281:	f3 0f 10 0d 17 1f 20 	movss  0x201f17(%rip),%xmm1        # 6041a0 <angle_auriculaire_phalange_phalangine>
+  402288:	00 
+  402289:	f3 0f 10 05 f3 0e 00 	movss  0xef3(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  402290:	00 
+  402291:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402294:	76 1c                	jbe    4022b2 <touche_pressee+0xa54>
+  402296:	f3 0f 10 0d 02 1f 20 	movss  0x201f02(%rip),%xmm1        # 6041a0 <angle_auriculaire_phalange_phalangine>
+  40229d:	00 
+  40229e:	f3 0f 10 05 e2 0e 00 	movss  0xee2(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  4022a5:	00 
+  4022a6:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  4022aa:	f3 0f 11 05 ee 1e 20 	movss  %xmm0,0x201eee(%rip)        # 6041a0 <angle_auriculaire_phalange_phalangine>
+  4022b1:	00 
+  4022b2:	f3 0f 10 0d ea 1e 20 	movss  0x201eea(%rip),%xmm1        # 6041a4 <angle_auriculaire_phalangine_phalangette>
+  4022b9:	00 
+  4022ba:	f3 0f 10 05 c2 0e 00 	movss  0xec2(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  4022c1:	00 
+  4022c2:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4022c5:	76 1c                	jbe    4022e3 <touche_pressee+0xa85>
+  4022c7:	f3 0f 10 0d d5 1e 20 	movss  0x201ed5(%rip),%xmm1        # 6041a4 <angle_auriculaire_phalangine_phalangette>
+  4022ce:	00 
+  4022cf:	f3 0f 10 05 b1 0e 00 	movss  0xeb1(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  4022d6:	00 
+  4022d7:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  4022db:	f3 0f 11 05 c1 1e 20 	movss  %xmm0,0x201ec1(%rip)        # 6041a4 <angle_auriculaire_phalangine_phalangette>
+  4022e2:	00 
+  4022e3:	f3 0f 10 0d a5 1e 20 	movss  0x201ea5(%rip),%xmm1        # 604190 <angle_paume_annulaire>
+  4022ea:	00 
+  4022eb:	f3 0f 10 05 91 0e 00 	movss  0xe91(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  4022f2:	00 
+  4022f3:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4022f6:	76 1c                	jbe    402314 <touche_pressee+0xab6>
+  4022f8:	f3 0f 10 0d 90 1e 20 	movss  0x201e90(%rip),%xmm1        # 604190 <angle_paume_annulaire>
+  4022ff:	00 
+  402300:	f3 0f 10 05 80 0e 00 	movss  0xe80(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  402307:	00 
+  402308:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  40230c:	f3 0f 11 05 7c 1e 20 	movss  %xmm0,0x201e7c(%rip)        # 604190 <angle_paume_annulaire>
+  402313:	00 
+  402314:	f3 0f 10 0d 78 1e 20 	movss  0x201e78(%rip),%xmm1        # 604194 <angle_annulaire_phalange_phalangine>
+  40231b:	00 
+  40231c:	f3 0f 10 05 60 0e 00 	movss  0xe60(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  402323:	00 
+  402324:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402327:	76 1c                	jbe    402345 <touche_pressee+0xae7>
+  402329:	f3 0f 10 0d 63 1e 20 	movss  0x201e63(%rip),%xmm1        # 604194 <angle_annulaire_phalange_phalangine>
+  402330:	00 
+  402331:	f3 0f 10 05 4f 0e 00 	movss  0xe4f(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  402338:	00 
+  402339:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  40233d:	f3 0f 11 05 4f 1e 20 	movss  %xmm0,0x201e4f(%rip)        # 604194 <angle_annulaire_phalange_phalangine>
+  402344:	00 
+  402345:	f3 0f 10 0d 4b 1e 20 	movss  0x201e4b(%rip),%xmm1        # 604198 <angle_annulaire_phalangine_phalangette>
+  40234c:	00 
+  40234d:	f3 0f 10 05 2f 0e 00 	movss  0xe2f(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  402354:	00 
+  402355:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402358:	76 1c                	jbe    402376 <touche_pressee+0xb18>
+  40235a:	f3 0f 10 0d 36 1e 20 	movss  0x201e36(%rip),%xmm1        # 604198 <angle_annulaire_phalangine_phalangette>
+  402361:	00 
+  402362:	f3 0f 10 05 1e 0e 00 	movss  0xe1e(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  402369:	00 
+  40236a:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  40236e:	f3 0f 11 05 22 1e 20 	movss  %xmm0,0x201e22(%rip)        # 604198 <angle_annulaire_phalangine_phalangette>
+  402375:	00 
+  402376:	f3 0f 10 0d 06 1e 20 	movss  0x201e06(%rip),%xmm1        # 604184 <angle_paume_majeur>
+  40237d:	00 
+  40237e:	f3 0f 10 05 fe 0d 00 	movss  0xdfe(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  402385:	00 
+  402386:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  402389:	76 1c                	jbe    4023a7 <touche_pressee+0xb49>
+  40238b:	f3 0f 10 0d f1 1d 20 	movss  0x201df1(%rip),%xmm1        # 604184 <angle_paume_majeur>
+  402392:	00 
+  402393:	f3 0f 10 05 ed 0d 00 	movss  0xded(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  40239a:	00 
+  40239b:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  40239f:	f3 0f 11 05 dd 1d 20 	movss  %xmm0,0x201ddd(%rip)        # 604184 <angle_paume_majeur>
+  4023a6:	00 
+  4023a7:	f3 0f 10 0d d9 1d 20 	movss  0x201dd9(%rip),%xmm1        # 604188 <angle_majeur_phalange_phalangine>
+  4023ae:	00 
+  4023af:	f3 0f 10 05 cd 0d 00 	movss  0xdcd(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  4023b6:	00 
+  4023b7:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4023ba:	76 1c                	jbe    4023d8 <touche_pressee+0xb7a>
+  4023bc:	f3 0f 10 0d c4 1d 20 	movss  0x201dc4(%rip),%xmm1        # 604188 <angle_majeur_phalange_phalangine>
+  4023c3:	00 
+  4023c4:	f3 0f 10 05 bc 0d 00 	movss  0xdbc(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  4023cb:	00 
+  4023cc:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  4023d0:	f3 0f 11 05 b0 1d 20 	movss  %xmm0,0x201db0(%rip)        # 604188 <angle_majeur_phalange_phalangine>
+  4023d7:	00 
+  4023d8:	f3 0f 10 0d ac 1d 20 	movss  0x201dac(%rip),%xmm1        # 60418c <angle_majeur_phalangine_phalangette>
+  4023df:	00 
+  4023e0:	f3 0f 10 05 9c 0d 00 	movss  0xd9c(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  4023e7:	00 
+  4023e8:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4023eb:	76 1c                	jbe    402409 <touche_pressee+0xbab>
+  4023ed:	f3 0f 10 0d 97 1d 20 	movss  0x201d97(%rip),%xmm1        # 60418c <angle_majeur_phalangine_phalangette>
+  4023f4:	00 
+  4023f5:	f3 0f 10 05 8b 0d 00 	movss  0xd8b(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  4023fc:	00 
+  4023fd:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  402401:	f3 0f 11 05 83 1d 20 	movss  %xmm0,0x201d83(%rip)        # 60418c <angle_majeur_phalangine_phalangette>
+  402408:	00 
+  402409:	f3 0f 10 0d 67 1d 20 	movss  0x201d67(%rip),%xmm1        # 604178 <angle_paume_indexe>
+  402410:	00 
+  402411:	f3 0f 10 05 6b 0d 00 	movss  0xd6b(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  402418:	00 
+  402419:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  40241c:	76 1c                	jbe    40243a <touche_pressee+0xbdc>
+  40241e:	f3 0f 10 0d 52 1d 20 	movss  0x201d52(%rip),%xmm1        # 604178 <angle_paume_indexe>
+  402425:	00 
+  402426:	f3 0f 10 05 5a 0d 00 	movss  0xd5a(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  40242d:	00 
+  40242e:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  402432:	f3 0f 11 05 3e 1d 20 	movss  %xmm0,0x201d3e(%rip)        # 604178 <angle_paume_indexe>
+  402439:	00 
+  40243a:	f3 0f 10 0d 3a 1d 20 	movss  0x201d3a(%rip),%xmm1        # 60417c <angle_indexe_phalange_phalangine>
+  402441:	00 
+  402442:	f3 0f 10 05 3a 0d 00 	movss  0xd3a(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  402449:	00 
+  40244a:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  40244d:	76 1c                	jbe    40246b <touche_pressee+0xc0d>
+  40244f:	f3 0f 10 0d 25 1d 20 	movss  0x201d25(%rip),%xmm1        # 60417c <angle_indexe_phalange_phalangine>
+  402456:	00 
+  402457:	f3 0f 10 05 29 0d 00 	movss  0xd29(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  40245e:	00 
+  40245f:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  402463:	f3 0f 11 05 11 1d 20 	movss  %xmm0,0x201d11(%rip)        # 60417c <angle_indexe_phalange_phalangine>
+  40246a:	00 
+  40246b:	f3 0f 10 0d 0d 1d 20 	movss  0x201d0d(%rip),%xmm1        # 604180 <angle_indexe_phalangine_phalangette>
+  402472:	00 
+  402473:	f3 0f 10 05 09 0d 00 	movss  0xd09(%rip),%xmm0        # 403184 <_IO_stdin_used+0x374>
+  40247a:	00 
+  40247b:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  40247e:	76 1c                	jbe    40249c <touche_pressee+0xc3e>
+  402480:	f3 0f 10 0d f8 1c 20 	movss  0x201cf8(%rip),%xmm1        # 604180 <angle_indexe_phalangine_phalangette>
+  402487:	00 
+  402488:	f3 0f 10 05 f8 0c 00 	movss  0xcf8(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  40248f:	00 
+  402490:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  402494:	f3 0f 11 05 e4 1c 20 	movss  %xmm0,0x201ce4(%rip)        # 604180 <angle_indexe_phalangine_phalangette>
+  40249b:	00 
+  40249c:	f3 0f 10 0d c8 1c 20 	movss  0x201cc8(%rip),%xmm1        # 60416c <angle_paume_pouce>
+  4024a3:	00 
+  4024a4:	f3 0f 10 05 e0 0c 00 	movss  0xce0(%rip),%xmm0        # 40318c <_IO_stdin_used+0x37c>
+  4024ab:	00 
+  4024ac:	0f 2e c1             	ucomiss %xmm1,%xmm0
+  4024af:	76 1c                	jbe    4024cd <touche_pressee+0xc6f>
+  4024b1:	f3 0f 10 0d b3 1c 20 	movss  0x201cb3(%rip),%xmm1        # 60416c <angle_paume_pouce>
+  4024b8:	00 
+  4024b9:	f3 0f 10 05 c7 0c 00 	movss  0xcc7(%rip),%xmm0        # 403188 <_IO_stdin_used+0x378>
+  4024c0:	00 
+  4024c1:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  4024c5:	f3 0f 11 05 9f 1c 20 	movss  %xmm0,0x201c9f(%rip)        # 60416c <angle_paume_pouce>
+  4024cc:	00 
+  4024cd:	f3 0f 10 05 9b 1c 20 	movss  0x201c9b(%rip),%xmm0        # 604170 <angle_pouce_phalange_phalangine>
+  4024d4:	00 
+  4024d5:	0f 2e 05 b4 0c 00 00 	ucomiss 0xcb4(%rip),%xmm0        # 403190 <_IO_stdin_used+0x380>
+  4024dc:	76 1c                	jbe    4024fa <touche_pressee+0xc9c>
+  4024de:	f3 0f 10 05 8a 1c 20 	movss  0x201c8a(%rip),%xmm0        # 604170 <angle_pouce_phalange_phalangine>
+  4024e5:	00 
+  4024e6:	f3 0f 10 0d 9a 0c 00 	movss  0xc9a(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  4024ed:	00 
+  4024ee:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  4024f2:	f3 0f 11 05 76 1c 20 	movss  %xmm0,0x201c76(%rip)        # 604170 <angle_pouce_phalange_phalangine>
+  4024f9:	00 
+  4024fa:	f3 0f 10 05 72 1c 20 	movss  0x201c72(%rip),%xmm0        # 604174 <angle_pouce_phalangine_phalangette>
+  402501:	00 
+  402502:	0f 2e 05 87 0c 00 00 	ucomiss 0xc87(%rip),%xmm0        # 403190 <_IO_stdin_used+0x380>
+  402509:	77 02                	ja     40250d <touche_pressee+0xcaf>
+  40250b:	eb 33                	jmp    402540 <touche_pressee+0xce2>
+  40250d:	f3 0f 10 05 5f 1c 20 	movss  0x201c5f(%rip),%xmm0        # 604174 <angle_pouce_phalangine_phalangette>
+  402514:	00 
+  402515:	f3 0f 10 0d 6b 0c 00 	movss  0xc6b(%rip),%xmm1        # 403188 <_IO_stdin_used+0x378>
+  40251c:	00 
+  40251d:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  402521:	f3 0f 11 05 4b 1c 20 	movss  %xmm0,0x201c4b(%rip)        # 604174 <angle_pouce_phalangine_phalangette>
+  402528:	00 
+  402529:	eb 15                	jmp    402540 <touche_pressee+0xce2>
+  40252b:	0f b6 45 fc          	movzbl -0x4(%rbp),%eax
+  40252f:	89 c6                	mov    %eax,%esi
+  402531:	bf 78 2e 40 00       	mov    $0x402e78,%edi
+  402536:	b8 00 00 00 00       	mov    $0x0,%eax
+  40253b:	e8 10 e9 ff ff       	callq  400e50 <printf@plt>
+  402540:	c9                   	leaveq 
+  402541:	c3                   	retq   
+
+0000000000402542 <axes>:
+  402542:	55                   	push   %rbp
+  402543:	48 89 e5             	mov    %rsp,%rbp
+  402546:	48 83 ec 30          	sub    $0x30,%rsp
+  40254a:	8b 05 48 0c 00 00    	mov    0xc48(%rip),%eax        # 403198 <_IO_stdin_used+0x388>
+  402550:	89 45 e8             	mov    %eax,-0x18(%rbp)
+  402553:	8b 05 43 0c 00 00    	mov    0xc43(%rip),%eax        # 40319c <_IO_stdin_used+0x38c>
+  402559:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  40255c:	8b 05 3e 0c 00 00    	mov    0xc3e(%rip),%eax        # 4031a0 <_IO_stdin_used+0x390>
+  402562:	89 45 f0             	mov    %eax,-0x10(%rbp)
+  402565:	f3 0f 10 45 e8       	movss  -0x18(%rbp),%xmm0
+  40256a:	f3 0f 10 0d 32 0c 00 	movss  0xc32(%rip),%xmm1        # 4031a4 <_IO_stdin_used+0x394>
+  402571:	00 
+  402572:	f3 0f 5e c1          	divss  %xmm1,%xmm0
+  402576:	f3 0f 58 45 ec       	addss  -0x14(%rbp),%xmm0
+  40257b:	f3 0f 5c 45 f0       	subss  -0x10(%rbp),%xmm0
+  402580:	f3 0f 11 45 f4       	movss  %xmm0,-0xc(%rbp)
+  402585:	f3 0f 10 45 ec       	movss  -0x14(%rbp),%xmm0
+  40258a:	f3 0f 5c 45 f0       	subss  -0x10(%rbp),%xmm0
+  40258f:	f3 0f 10 4d f4       	movss  -0xc(%rbp),%xmm1
+  402594:	f3 0f 10 15 08 0c 00 	movss  0xc08(%rip),%xmm2        # 4031a4 <_IO_stdin_used+0x394>
+  40259b:	00 
+  40259c:	f3 0f 5e ca          	divss  %xmm2,%xmm1
+  4025a0:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  4025a4:	f3 0f 11 45 f8       	movss  %xmm0,-0x8(%rbp)
+  4025a9:	f3 0f 10 45 ec       	movss  -0x14(%rbp),%xmm0
+  4025ae:	f3 0f 5c 45 f0       	subss  -0x10(%rbp),%xmm0
+  4025b3:	f3 0f 11 45 fc       	movss  %xmm0,-0x4(%rbp)
+  4025b8:	0f 57 d2             	xorps  %xmm2,%xmm2
+  4025bb:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4025be:	f3 0f 10 05 d6 0b 00 	movss  0xbd6(%rip),%xmm0        # 40319c <_IO_stdin_used+0x38c>
+  4025c5:	00 
+  4025c6:	e8 65 ea ff ff       	callq  401030 <glColor3f@plt>
+  4025cb:	e8 40 ea ff ff       	callq  401010 <glPushMatrix@plt>
+  4025d0:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  4025d3:	0f 57 d2             	xorps  %xmm2,%xmm2
+  4025d6:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4025d9:	89 45 d8             	mov    %eax,-0x28(%rbp)
+  4025dc:	f3 0f 10 45 d8       	movss  -0x28(%rbp),%xmm0
+  4025e1:	e8 9a e9 ff ff       	callq  400f80 <glTranslatef@plt>
+  4025e6:	8b 4d e8             	mov    -0x18(%rbp),%ecx
+  4025e9:	8b 55 e8             	mov    -0x18(%rbp),%edx
+  4025ec:	8b 45 f4             	mov    -0xc(%rbp),%eax
+  4025ef:	89 4d d8             	mov    %ecx,-0x28(%rbp)
+  4025f2:	f3 0f 10 55 d8       	movss  -0x28(%rbp),%xmm2
+  4025f7:	89 55 d8             	mov    %edx,-0x28(%rbp)
+  4025fa:	f3 0f 10 4d d8       	movss  -0x28(%rbp),%xmm1
+  4025ff:	89 45 d8             	mov    %eax,-0x28(%rbp)
+  402602:	f3 0f 10 45 d8       	movss  -0x28(%rbp),%xmm0
+  402607:	e8 84 e9 ff ff       	callq  400f90 <glScalef@plt>
+  40260c:	f2 0f 10 05 94 0b 00 	movsd  0xb94(%rip),%xmm0        # 4031a8 <_IO_stdin_used+0x398>
+  402613:	00 
+  402614:	e8 a7 e9 ff ff       	callq  400fc0 <glutSolidCube@plt>
+  402619:	e8 32 ea ff ff       	callq  401050 <glPopMatrix@plt>
+  40261e:	0f 57 d2             	xorps  %xmm2,%xmm2
+  402621:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402624:	f3 0f 10 05 70 0b 00 	movss  0xb70(%rip),%xmm0        # 40319c <_IO_stdin_used+0x38c>
+  40262b:	00 
+  40262c:	e8 ff e9 ff ff       	callq  401030 <glColor3f@plt>
+  402631:	e8 da e9 ff ff       	callq  401010 <glPushMatrix@plt>
+  402636:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  402639:	0f 57 d2             	xorps  %xmm2,%xmm2
+  40263c:	0f 57 c9             	xorps  %xmm1,%xmm1
+  40263f:	89 45 d8             	mov    %eax,-0x28(%rbp)
+  402642:	f3 0f 10 45 d8       	movss  -0x28(%rbp),%xmm0
+  402647:	e8 34 e9 ff ff       	callq  400f80 <glTranslatef@plt>
+  40264c:	0f 57 db             	xorps  %xmm3,%xmm3
+  40264f:	f3 0f 10 15 45 0b 00 	movss  0xb45(%rip),%xmm2        # 40319c <_IO_stdin_used+0x38c>
+  402656:	00 
+  402657:	0f 57 c9             	xorps  %xmm1,%xmm1
+  40265a:	f3 0f 10 05 4e 0b 00 	movss  0xb4e(%rip),%xmm0        # 4031b0 <_IO_stdin_used+0x3a0>
+  402661:	00 
+  402662:	e8 69 e9 ff ff       	callq  400fd0 <glRotatef@plt>
+  402667:	f3 0f 10 45 f0       	movss  -0x10(%rbp),%xmm0
+  40266c:	0f 5a c0             	cvtps2pd %xmm0,%xmm0
+  40266f:	48 b8 00 00 00 a0 99 	movabs $0x3fb99999a0000000,%rax
+  402676:	99 b9 3f 
+  402679:	be 05 00 00 00       	mov    $0x5,%esi
+  40267e:	bf 32 00 00 00       	mov    $0x32,%edi
+  402683:	66 0f 28 c8          	movapd %xmm0,%xmm1
+  402687:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+  40268b:	f2 0f 10 45 d8       	movsd  -0x28(%rbp),%xmm0
+  402690:	e8 0b e9 ff ff       	callq  400fa0 <glutSolidCone@plt>
+  402695:	e8 b6 e9 ff ff       	callq  401050 <glPopMatrix@plt>
+  40269a:	0f 57 d2             	xorps  %xmm2,%xmm2
+  40269d:	f3 0f 10 0d f7 0a 00 	movss  0xaf7(%rip),%xmm1        # 40319c <_IO_stdin_used+0x38c>
+  4026a4:	00 
+  4026a5:	0f 57 c0             	xorps  %xmm0,%xmm0
+  4026a8:	e8 83 e9 ff ff       	callq  401030 <glColor3f@plt>
+  4026ad:	e8 5e e9 ff ff       	callq  401010 <glPushMatrix@plt>
+  4026b2:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  4026b5:	0f 57 d2             	xorps  %xmm2,%xmm2
+  4026b8:	89 45 d8             	mov    %eax,-0x28(%rbp)
+  4026bb:	f3 0f 10 4d d8       	movss  -0x28(%rbp),%xmm1
+  4026c0:	0f 57 c0             	xorps  %xmm0,%xmm0
+  4026c3:	e8 b8 e8 ff ff       	callq  400f80 <glTranslatef@plt>
+  4026c8:	8b 4d e8             	mov    -0x18(%rbp),%ecx
+  4026cb:	8b 55 f4             	mov    -0xc(%rbp),%edx
+  4026ce:	8b 45 e8             	mov    -0x18(%rbp),%eax
+  4026d1:	89 4d d8             	mov    %ecx,-0x28(%rbp)
+  4026d4:	f3 0f 10 55 d8       	movss  -0x28(%rbp),%xmm2
+  4026d9:	89 55 d8             	mov    %edx,-0x28(%rbp)
+  4026dc:	f3 0f 10 4d d8       	movss  -0x28(%rbp),%xmm1
+  4026e1:	89 45 d8             	mov    %eax,-0x28(%rbp)
+  4026e4:	f3 0f 10 45 d8       	movss  -0x28(%rbp),%xmm0
+  4026e9:	e8 a2 e8 ff ff       	callq  400f90 <glScalef@plt>
+  4026ee:	f2 0f 10 05 b2 0a 00 	movsd  0xab2(%rip),%xmm0        # 4031a8 <_IO_stdin_used+0x398>
+  4026f5:	00 
+  4026f6:	e8 c5 e8 ff ff       	callq  400fc0 <glutSolidCube@plt>
+  4026fb:	e8 50 e9 ff ff       	callq  401050 <glPopMatrix@plt>
+  402700:	0f 57 d2             	xorps  %xmm2,%xmm2
+  402703:	f3 0f 10 0d 91 0a 00 	movss  0xa91(%rip),%xmm1        # 40319c <_IO_stdin_used+0x38c>
+  40270a:	00 
+  40270b:	0f 57 c0             	xorps  %xmm0,%xmm0
+  40270e:	e8 1d e9 ff ff       	callq  401030 <glColor3f@plt>
+  402713:	e8 f8 e8 ff ff       	callq  401010 <glPushMatrix@plt>
+  402718:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  40271b:	0f 57 d2             	xorps  %xmm2,%xmm2
+  40271e:	89 45 d8             	mov    %eax,-0x28(%rbp)
+  402721:	f3 0f 10 4d d8       	movss  -0x28(%rbp),%xmm1
+  402726:	0f 57 c0             	xorps  %xmm0,%xmm0
+  402729:	e8 52 e8 ff ff       	callq  400f80 <glTranslatef@plt>
+  40272e:	0f 57 db             	xorps  %xmm3,%xmm3
+  402731:	0f 57 d2             	xorps  %xmm2,%xmm2
+  402734:	f3 0f 10 0d 60 0a 00 	movss  0xa60(%rip),%xmm1        # 40319c <_IO_stdin_used+0x38c>
+  40273b:	00 
+  40273c:	f3 0f 10 05 70 0a 00 	movss  0xa70(%rip),%xmm0        # 4031b4 <_IO_stdin_used+0x3a4>
+  402743:	00 
+  402744:	e8 87 e8 ff ff       	callq  400fd0 <glRotatef@plt>
+  402749:	f3 0f 10 45 f0       	movss  -0x10(%rbp),%xmm0
+  40274e:	0f 5a c0             	cvtps2pd %xmm0,%xmm0
+  402751:	48 b8 9a 99 99 99 99 	movabs $0x3fb999999999999a,%rax
+  402758:	99 b9 3f 
+  40275b:	be 05 00 00 00       	mov    $0x5,%esi
+  402760:	bf 32 00 00 00       	mov    $0x32,%edi
+  402765:	66 0f 28 c8          	movapd %xmm0,%xmm1
+  402769:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+  40276d:	f2 0f 10 45 d8       	movsd  -0x28(%rbp),%xmm0
+  402772:	e8 29 e8 ff ff       	callq  400fa0 <glutSolidCone@plt>
+  402777:	e8 d4 e8 ff ff       	callq  401050 <glPopMatrix@plt>
+  40277c:	f3 0f 10 15 18 0a 00 	movss  0xa18(%rip),%xmm2        # 40319c <_IO_stdin_used+0x38c>
+  402783:	00 
+  402784:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402787:	0f 57 c0             	xorps  %xmm0,%xmm0
+  40278a:	e8 a1 e8 ff ff       	callq  401030 <glColor3f@plt>
+  40278f:	e8 7c e8 ff ff       	callq  401010 <glPushMatrix@plt>
+  402794:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  402797:	89 45 d8             	mov    %eax,-0x28(%rbp)
+  40279a:	f3 0f 10 55 d8       	movss  -0x28(%rbp),%xmm2
+  40279f:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4027a2:	0f 57 c0             	xorps  %xmm0,%xmm0
+  4027a5:	e8 d6 e7 ff ff       	callq  400f80 <glTranslatef@plt>
+  4027aa:	8b 4d f4             	mov    -0xc(%rbp),%ecx
+  4027ad:	8b 55 e8             	mov    -0x18(%rbp),%edx
+  4027b0:	8b 45 e8             	mov    -0x18(%rbp),%eax
+  4027b3:	89 4d d8             	mov    %ecx,-0x28(%rbp)
+  4027b6:	f3 0f 10 55 d8       	movss  -0x28(%rbp),%xmm2
+  4027bb:	89 55 d8             	mov    %edx,-0x28(%rbp)
+  4027be:	f3 0f 10 4d d8       	movss  -0x28(%rbp),%xmm1
+  4027c3:	89 45 d8             	mov    %eax,-0x28(%rbp)
+  4027c6:	f3 0f 10 45 d8       	movss  -0x28(%rbp),%xmm0
+  4027cb:	e8 c0 e7 ff ff       	callq  400f90 <glScalef@plt>
+  4027d0:	f2 0f 10 05 d0 09 00 	movsd  0x9d0(%rip),%xmm0        # 4031a8 <_IO_stdin_used+0x398>
+  4027d7:	00 
+  4027d8:	e8 e3 e7 ff ff       	callq  400fc0 <glutSolidCube@plt>
+  4027dd:	e8 6e e8 ff ff       	callq  401050 <glPopMatrix@plt>
+  4027e2:	f3 0f 10 15 b2 09 00 	movss  0x9b2(%rip),%xmm2        # 40319c <_IO_stdin_used+0x38c>
+  4027e9:	00 
+  4027ea:	0f 57 c9             	xorps  %xmm1,%xmm1
+  4027ed:	0f 57 c0             	xorps  %xmm0,%xmm0
+  4027f0:	e8 3b e8 ff ff       	callq  401030 <glColor3f@plt>
+  4027f5:	e8 16 e8 ff ff       	callq  401010 <glPushMatrix@plt>
+  4027fa:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  4027fd:	89 45 d8             	mov    %eax,-0x28(%rbp)
+  402800:	f3 0f 10 55 d8       	movss  -0x28(%rbp),%xmm2
+  402805:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402808:	0f 57 c0             	xorps  %xmm0,%xmm0
+  40280b:	e8 70 e7 ff ff       	callq  400f80 <glTranslatef@plt>
+  402810:	f3 0f 10 45 f0       	movss  -0x10(%rbp),%xmm0
+  402815:	0f 5a c0             	cvtps2pd %xmm0,%xmm0
+  402818:	48 b8 9a 99 99 99 99 	movabs $0x3fb999999999999a,%rax
+  40281f:	99 b9 3f 
+  402822:	be 05 00 00 00       	mov    $0x5,%esi
+  402827:	bf 32 00 00 00       	mov    $0x32,%edi
+  40282c:	66 0f 28 c8          	movapd %xmm0,%xmm1
+  402830:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+  402834:	f2 0f 10 45 d8       	movsd  -0x28(%rbp),%xmm0
+  402839:	e8 62 e7 ff ff       	callq  400fa0 <glutSolidCone@plt>
+  40283e:	e8 0d e8 ff ff       	callq  401050 <glPopMatrix@plt>
+  402843:	c9                   	leaveq 
+  402844:	c3                   	retq   
+
+0000000000402845 <InitGL>:
+  402845:	55                   	push   %rbp
+  402846:	48 89 e5             	mov    %rsp,%rbp
+  402849:	48 83 ec 10          	sub    $0x10,%rsp
+  40284d:	89 7d fc             	mov    %edi,-0x4(%rbp)
+  402850:	89 75 f8             	mov    %esi,-0x8(%rbp)
+  402853:	0f 57 db             	xorps  %xmm3,%xmm3
+  402856:	0f 57 d2             	xorps  %xmm2,%xmm2
+  402859:	0f 57 c9             	xorps  %xmm1,%xmm1
+  40285c:	0f 57 c0             	xorps  %xmm0,%xmm0
+  40285f:	e8 bc e6 ff ff       	callq  400f20 <glClearColor@plt>
+  402864:	f2 0f 10 05 84 09 00 	movsd  0x984(%rip),%xmm0        # 4031f0 <_IO_stdin_used+0x3e0>
+  40286b:	00 
+  40286c:	e8 7f e7 ff ff       	callq  400ff0 <glClearDepth@plt>
+  402871:	bf 03 02 00 00       	mov    $0x203,%edi
+  402876:	e8 65 e7 ff ff       	callq  400fe0 <glDepthFunc@plt>
+  40287b:	bf 01 1d 00 00       	mov    $0x1d01,%edi
+  402880:	e8 bb e6 ff ff       	callq  400f40 <glShadeModel@plt>
+  402885:	bf 01 17 00 00       	mov    $0x1701,%edi
+  40288a:	e8 e1 e5 ff ff       	callq  400e70 <glMatrixMode@plt>
+  40288f:	e8 7c e6 ff ff       	callq  400f10 <glLoadIdentity@plt>
+  402894:	f3 0f 2a 45 fc       	cvtsi2ssl -0x4(%rbp),%xmm0
+  402899:	f3 0f 2a 4d f8       	cvtsi2ssl -0x8(%rbp),%xmm1
+  40289e:	f3 0f 5e c1          	divss  %xmm1,%xmm0
+  4028a2:	0f 14 c0             	unpcklps %xmm0,%xmm0
+  4028a5:	0f 5a c0             	cvtps2pd %xmm0,%xmm0
+  4028a8:	48 b9 00 00 00 00 00 	movabs $0x4059000000000000,%rcx
+  4028af:	00 59 40 
+  4028b2:	48 ba 00 00 00 a0 99 	movabs $0x3fb99999a0000000,%rdx
+  4028b9:	99 b9 3f 
+  4028bc:	48 b8 00 00 00 00 00 	movabs $0x4046800000000000,%rax
+  4028c3:	80 46 40 
+  4028c6:	48 89 4d f0          	mov    %rcx,-0x10(%rbp)
+  4028ca:	f2 0f 10 5d f0       	movsd  -0x10(%rbp),%xmm3
+  4028cf:	48 89 55 f0          	mov    %rdx,-0x10(%rbp)
+  4028d3:	f2 0f 10 55 f0       	movsd  -0x10(%rbp),%xmm2
+  4028d8:	66 0f 28 c8          	movapd %xmm0,%xmm1
+  4028dc:	48 89 45 f0          	mov    %rax,-0x10(%rbp)
+  4028e0:	f2 0f 10 45 f0       	movsd  -0x10(%rbp),%xmm0
+  4028e5:	e8 86 e7 ff ff       	callq  401070 <gluPerspective@plt>
+  4028ea:	bf 00 17 00 00       	mov    $0x1700,%edi
+  4028ef:	e8 7c e5 ff ff       	callq  400e70 <glMatrixMode@plt>
+  4028f4:	bf e2 0b 00 00       	mov    $0xbe2,%edi
+  4028f9:	e8 42 e5 ff ff       	callq  400e40 <glEnable@plt>
+  4028fe:	be 01 00 00 00       	mov    $0x1,%esi
+  402903:	bf 02 03 00 00       	mov    $0x302,%edi
+  402908:	e8 53 e6 ff ff       	callq  400f60 <glBlendFunc@plt>
+  40290d:	b8 00 00 00 00       	mov    $0x0,%eax
+  402912:	e8 46 02 00 00       	callq  402b5d <lumiere>
+  402917:	c9                   	leaveq 
+  402918:	c3                   	retq   
+
+0000000000402919 <ReSizeGLScene>:
+  402919:	55                   	push   %rbp
+  40291a:	48 89 e5             	mov    %rsp,%rbp
+  40291d:	48 83 ec 10          	sub    $0x10,%rsp
+  402921:	89 7d fc             	mov    %edi,-0x4(%rbp)
+  402924:	89 75 f8             	mov    %esi,-0x8(%rbp)
+  402927:	83 7d f8 00          	cmpl   $0x0,-0x8(%rbp)
+  40292b:	75 07                	jne    402934 <ReSizeGLScene+0x1b>
+  40292d:	c7 45 f8 01 00 00 00 	movl   $0x1,-0x8(%rbp)
+  402934:	8b 55 f8             	mov    -0x8(%rbp),%edx
+  402937:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  40293a:	89 d1                	mov    %edx,%ecx
+  40293c:	89 c2                	mov    %eax,%edx
+  40293e:	be 00 00 00 00       	mov    $0x0,%esi
+  402943:	bf 00 00 00 00       	mov    $0x0,%edi
+  402948:	e8 13 e7 ff ff       	callq  401060 <glViewport@plt>
+  40294d:	bf 01 17 00 00       	mov    $0x1701,%edi
+  402952:	e8 19 e5 ff ff       	callq  400e70 <glMatrixMode@plt>
+  402957:	e8 b4 e5 ff ff       	callq  400f10 <glLoadIdentity@plt>
+  40295c:	f3 0f 2a 45 fc       	cvtsi2ssl -0x4(%rbp),%xmm0
+  402961:	f3 0f 2a 4d f8       	cvtsi2ssl -0x8(%rbp),%xmm1
+  402966:	f3 0f 5e c1          	divss  %xmm1,%xmm0
+  40296a:	0f 14 c0             	unpcklps %xmm0,%xmm0
+  40296d:	0f 5a c0             	cvtps2pd %xmm0,%xmm0
+  402970:	48 b9 00 00 00 00 00 	movabs $0x4059000000000000,%rcx
+  402977:	00 59 40 
+  40297a:	48 ba 00 00 00 a0 99 	movabs $0x3fb99999a0000000,%rdx
+  402981:	99 b9 3f 
+  402984:	48 b8 00 00 00 00 00 	movabs $0x4046800000000000,%rax
+  40298b:	80 46 40 
+  40298e:	48 89 4d f0          	mov    %rcx,-0x10(%rbp)
+  402992:	f2 0f 10 5d f0       	movsd  -0x10(%rbp),%xmm3
+  402997:	48 89 55 f0          	mov    %rdx,-0x10(%rbp)
+  40299b:	f2 0f 10 55 f0       	movsd  -0x10(%rbp),%xmm2
+  4029a0:	66 0f 28 c8          	movapd %xmm0,%xmm1
+  4029a4:	48 89 45 f0          	mov    %rax,-0x10(%rbp)
+  4029a8:	f2 0f 10 45 f0       	movsd  -0x10(%rbp),%xmm0
+  4029ad:	e8 be e6 ff ff       	callq  401070 <gluPerspective@plt>
+  4029b2:	bf 00 17 00 00       	mov    $0x1700,%edi
+  4029b7:	e8 b4 e4 ff ff       	callq  400e70 <glMatrixMode@plt>
+  4029bc:	c9                   	leaveq 
+  4029bd:	c3                   	retq   
+
+00000000004029be <specialKeyPressed>:
+  4029be:	55                   	push   %rbp
+  4029bf:	48 89 e5             	mov    %rsp,%rbp
+  4029c2:	48 83 ec 10          	sub    $0x10,%rsp
+  4029c6:	89 7d fc             	mov    %edi,-0x4(%rbp)
+  4029c9:	89 75 f8             	mov    %esi,-0x8(%rbp)
+  4029cc:	89 55 f4             	mov    %edx,-0xc(%rbp)
+  4029cf:	bf 64 00 00 00       	mov    $0x64,%edi
+  4029d4:	e8 97 e5 ff ff       	callq  400f70 <usleep@plt>
+  4029d9:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  4029dc:	83 e8 64             	sub    $0x64,%eax
+  4029df:	83 f8 05             	cmp    $0x5,%eax
+  4029e2:	0f 87 c3 00 00 00    	ja     402aab <specialKeyPressed+0xed>
+  4029e8:	89 c0                	mov    %eax,%eax
+  4029ea:	48 8b 04 c5 b8 31 40 	mov    0x4031b8(,%rax,8),%rax
+  4029f1:	00 
+  4029f2:	ff e0                	jmpq   *%rax
+  4029f4:	f3 0f 10 05 5c 17 20 	movss  0x20175c(%rip),%xmm0        # 604158 <z>
+  4029fb:	00 
+  4029fc:	f3 0f 10 0d f4 07 00 	movss  0x7f4(%rip),%xmm1        # 4031f8 <_IO_stdin_used+0x3e8>
+  402a03:	00 
+  402a04:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  402a08:	f3 0f 11 05 48 17 20 	movss  %xmm0,0x201748(%rip)        # 604158 <z>
+  402a0f:	00 
+  402a10:	e9 97 00 00 00       	jmpq   402aac <specialKeyPressed+0xee>
+  402a15:	f3 0f 10 0d 3b 17 20 	movss  0x20173b(%rip),%xmm1        # 604158 <z>
+  402a1c:	00 
+  402a1d:	f3 0f 10 05 d3 07 00 	movss  0x7d3(%rip),%xmm0        # 4031f8 <_IO_stdin_used+0x3e8>
+  402a24:	00 
+  402a25:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  402a29:	f3 0f 11 05 27 17 20 	movss  %xmm0,0x201727(%rip)        # 604158 <z>
+  402a30:	00 
+  402a31:	eb 79                	jmp    402aac <specialKeyPressed+0xee>
+  402a33:	f3 0f 10 05 29 17 20 	movss  0x201729(%rip),%xmm0        # 604164 <xrot>
+  402a3a:	00 
+  402a3b:	f3 0f 10 0d b9 07 00 	movss  0x7b9(%rip),%xmm1        # 4031fc <_IO_stdin_used+0x3ec>
+  402a42:	00 
+  402a43:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  402a47:	f3 0f 11 05 15 17 20 	movss  %xmm0,0x201715(%rip)        # 604164 <xrot>
+  402a4e:	00 
+  402a4f:	eb 5b                	jmp    402aac <specialKeyPressed+0xee>
+  402a51:	f3 0f 10 0d 0b 17 20 	movss  0x20170b(%rip),%xmm1        # 604164 <xrot>
+  402a58:	00 
+  402a59:	f3 0f 10 05 9b 07 00 	movss  0x79b(%rip),%xmm0        # 4031fc <_IO_stdin_used+0x3ec>
+  402a60:	00 
+  402a61:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  402a65:	f3 0f 11 05 f7 16 20 	movss  %xmm0,0x2016f7(%rip)        # 604164 <xrot>
+  402a6c:	00 
+  402a6d:	eb 3d                	jmp    402aac <specialKeyPressed+0xee>
+  402a6f:	f3 0f 10 05 f1 16 20 	movss  0x2016f1(%rip),%xmm0        # 604168 <yrot>
+  402a76:	00 
+  402a77:	f3 0f 10 0d 7d 07 00 	movss  0x77d(%rip),%xmm1        # 4031fc <_IO_stdin_used+0x3ec>
+  402a7e:	00 
+  402a7f:	f3 0f 5c c1          	subss  %xmm1,%xmm0
+  402a83:	f3 0f 11 05 dd 16 20 	movss  %xmm0,0x2016dd(%rip)        # 604168 <yrot>
+  402a8a:	00 
+  402a8b:	eb 1f                	jmp    402aac <specialKeyPressed+0xee>
+  402a8d:	f3 0f 10 0d d3 16 20 	movss  0x2016d3(%rip),%xmm1        # 604168 <yrot>
+  402a94:	00 
+  402a95:	f3 0f 10 05 5f 07 00 	movss  0x75f(%rip),%xmm0        # 4031fc <_IO_stdin_used+0x3ec>
+  402a9c:	00 
+  402a9d:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+  402aa1:	f3 0f 11 05 bf 16 20 	movss  %xmm0,0x2016bf(%rip)        # 604168 <yrot>
+  402aa8:	00 
+  402aa9:	eb 01                	jmp    402aac <specialKeyPressed+0xee>
+  402aab:	90                   	nop
+  402aac:	c9                   	leaveq 
+  402aad:	c3                   	retq   
+
+0000000000402aae <notre_init>:
+  402aae:	55                   	push   %rbp
+  402aaf:	48 89 e5             	mov    %rsp,%rbp
+  402ab2:	48 83 ec 20          	sub    $0x20,%rsp
+  402ab6:	89 7d fc             	mov    %edi,-0x4(%rbp)
+  402ab9:	48 89 75 f0          	mov    %rsi,-0x10(%rbp)
+  402abd:	48 89 55 e8          	mov    %rdx,-0x18(%rbp)
+  402ac1:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
+  402ac5:	48 8d 45 fc          	lea    -0x4(%rbp),%rax
+  402ac9:	48 89 d6             	mov    %rdx,%rsi
+  402acc:	48 89 c7             	mov    %rax,%rdi
+  402acf:	e8 0c e4 ff ff       	callq  400ee0 <glutInit@plt>
+  402ad4:	bf 1a 00 00 00       	mov    $0x1a,%edi
+  402ad9:	e8 62 e5 ff ff       	callq  401040 <glutInitDisplayMode@plt>
+  402ade:	be e0 01 00 00       	mov    $0x1e0,%esi
+  402ae3:	bf 80 02 00 00       	mov    $0x280,%edi
+  402ae8:	e8 73 e3 ff ff       	callq  400e60 <glutInitWindowSize@plt>
+  402aed:	be 00 00 00 00       	mov    $0x0,%esi
+  402af2:	bf 00 00 00 00       	mov    $0x0,%edi
+  402af7:	e8 34 e4 ff ff       	callq  400f30 <glutInitWindowPosition@plt>
+  402afc:	bf e8 31 40 00       	mov    $0x4031e8,%edi
+  402b01:	e8 aa e4 ff ff       	callq  400fb0 <glutCreateWindow@plt>
+  402b06:	89 05 a0 16 20 00    	mov    %eax,0x2016a0(%rip)        # 6041ac <window>
+  402b0c:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  402b10:	48 89 c7             	mov    %rax,%rdi
+  402b13:	e8 e8 e3 ff ff       	callq  400f00 <glutDisplayFunc@plt>
+  402b18:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  402b1c:	48 89 c7             	mov    %rax,%rdi
+  402b1f:	e8 9c e3 ff ff       	callq  400ec0 <glutIdleFunc@plt>
+  402b24:	bf 19 29 40 00       	mov    $0x402919,%edi
+  402b29:	e8 22 e4 ff ff       	callq  400f50 <glutReshapeFunc@plt>
+  402b2e:	bf 5e 18 40 00       	mov    $0x40185e,%edi
+  402b33:	e8 e8 e4 ff ff       	callq  401020 <glutKeyboardFunc@plt>
+  402b38:	bf be 29 40 00       	mov    $0x4029be,%edi
+  402b3d:	e8 8e e3 ff ff       	callq  400ed0 <glutSpecialFunc@plt>
+  402b42:	be e0 01 00 00       	mov    $0x1e0,%esi
+  402b47:	bf 80 02 00 00       	mov    $0x280,%edi
+  402b4c:	e8 f4 fc ff ff       	callq  402845 <InitGL>
+  402b51:	e8 2a e5 ff ff       	callq  401080 <glutMainLoop@plt>
+  402b56:	b8 01 00 00 00       	mov    $0x1,%eax
+  402b5b:	c9                   	leaveq 
+  402b5c:	c3                   	retq   
+
+0000000000402b5d <lumiere>:
+  402b5d:	55                   	push   %rbp
+  402b5e:	48 89 e5             	mov    %rsp,%rbp
+  402b61:	48 83 ec 40          	sub    $0x40,%rsp
+  402b65:	8b 05 95 06 00 00    	mov    0x695(%rip),%eax        # 403200 <_IO_stdin_used+0x3f0>
+  402b6b:	89 45 c0             	mov    %eax,-0x40(%rbp)
+  402b6e:	8b 05 8c 06 00 00    	mov    0x68c(%rip),%eax        # 403200 <_IO_stdin_used+0x3f0>
+  402b74:	89 45 c4             	mov    %eax,-0x3c(%rbp)
+  402b77:	8b 05 83 06 00 00    	mov    0x683(%rip),%eax        # 403200 <_IO_stdin_used+0x3f0>
+  402b7d:	89 45 c8             	mov    %eax,-0x38(%rbp)
+  402b80:	8b 05 7e 06 00 00    	mov    0x67e(%rip),%eax        # 403204 <_IO_stdin_used+0x3f4>
+  402b86:	89 45 cc             	mov    %eax,-0x34(%rbp)
+  402b89:	8b 05 79 06 00 00    	mov    0x679(%rip),%eax        # 403208 <_IO_stdin_used+0x3f8>
+  402b8f:	89 45 d0             	mov    %eax,-0x30(%rbp)
+  402b92:	8b 05 70 06 00 00    	mov    0x670(%rip),%eax        # 403208 <_IO_stdin_used+0x3f8>
+  402b98:	89 45 d4             	mov    %eax,-0x2c(%rbp)
+  402b9b:	8b 05 67 06 00 00    	mov    0x667(%rip),%eax        # 403208 <_IO_stdin_used+0x3f8>
+  402ba1:	89 45 d8             	mov    %eax,-0x28(%rbp)
+  402ba4:	8b 05 5a 06 00 00    	mov    0x65a(%rip),%eax        # 403204 <_IO_stdin_used+0x3f4>
+  402baa:	89 45 dc             	mov    %eax,-0x24(%rbp)
+  402bad:	8b 05 55 06 00 00    	mov    0x655(%rip),%eax        # 403208 <_IO_stdin_used+0x3f8>
+  402bb3:	89 45 e0             	mov    %eax,-0x20(%rbp)
+  402bb6:	8b 05 4c 06 00 00    	mov    0x64c(%rip),%eax        # 403208 <_IO_stdin_used+0x3f8>
+  402bbc:	89 45 e4             	mov    %eax,-0x1c(%rbp)
+  402bbf:	8b 05 43 06 00 00    	mov    0x643(%rip),%eax        # 403208 <_IO_stdin_used+0x3f8>
+  402bc5:	89 45 e8             	mov    %eax,-0x18(%rbp)
+  402bc8:	8b 05 36 06 00 00    	mov    0x636(%rip),%eax        # 403204 <_IO_stdin_used+0x3f4>
+  402bce:	89 45 ec             	mov    %eax,-0x14(%rbp)
+  402bd1:	8b 05 35 06 00 00    	mov    0x635(%rip),%eax        # 40320c <_IO_stdin_used+0x3fc>
+  402bd7:	89 45 f0             	mov    %eax,-0x10(%rbp)
+  402bda:	8b 05 30 06 00 00    	mov    0x630(%rip),%eax        # 403210 <_IO_stdin_used+0x400>
+  402be0:	89 45 f4             	mov    %eax,-0xc(%rbp)
+  402be3:	8b 05 27 06 00 00    	mov    0x627(%rip),%eax        # 403210 <_IO_stdin_used+0x400>
+  402be9:	89 45 f8             	mov    %eax,-0x8(%rbp)
+  402bec:	8b 05 12 06 00 00    	mov    0x612(%rip),%eax        # 403204 <_IO_stdin_used+0x3f4>
+  402bf2:	89 45 fc             	mov    %eax,-0x4(%rbp)
+  402bf5:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+  402bf9:	48 89 c2             	mov    %rax,%rdx
+  402bfc:	be 00 12 00 00       	mov    $0x1200,%esi
+  402c01:	bf 01 40 00 00       	mov    $0x4001,%edi
+  402c06:	e8 f5 e3 ff ff       	callq  401000 <glLightfv@plt>
+  402c0b:	48 8d 45 d0          	lea    -0x30(%rbp),%rax
+  402c0f:	48 89 c2             	mov    %rax,%rdx
+  402c12:	be 01 12 00 00       	mov    $0x1201,%esi
+  402c17:	bf 01 40 00 00       	mov    $0x4001,%edi
+  402c1c:	e8 df e3 ff ff       	callq  401000 <glLightfv@plt>
+  402c21:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  402c25:	48 89 c2             	mov    %rax,%rdx
+  402c28:	be 02 12 00 00       	mov    $0x1202,%esi
+  402c2d:	bf 01 40 00 00       	mov    $0x4001,%edi
+  402c32:	e8 c9 e3 ff ff       	callq  401000 <glLightfv@plt>
+  402c37:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+  402c3b:	48 89 c2             	mov    %rax,%rdx
+  402c3e:	be 03 12 00 00       	mov    $0x1203,%esi
+  402c43:	bf 01 40 00 00       	mov    $0x4001,%edi
+  402c48:	e8 b3 e3 ff ff       	callq  401000 <glLightfv@plt>
+  402c4d:	bf 01 40 00 00       	mov    $0x4001,%edi
+  402c52:	e8 e9 e1 ff ff       	callq  400e40 <glEnable@plt>
+  402c57:	c9                   	leaveq 
+  402c58:	c3                   	retq   
+
+0000000000402c59 <switch_blend>:
+  402c59:	55                   	push   %rbp
+  402c5a:	48 89 e5             	mov    %rsp,%rbp
+  402c5d:	48 83 ec 10          	sub    $0x10,%rsp
+  402c61:	89 7d fc             	mov    %edi,-0x4(%rbp)
+  402c64:	83 7d fc 00          	cmpl   $0x0,-0x4(%rbp)
+  402c68:	0f 94 c0             	sete   %al
+  402c6b:	0f b6 c0             	movzbl %al,%eax
+  402c6e:	89 45 fc             	mov    %eax,-0x4(%rbp)
+  402c71:	83 7d fc 00          	cmpl   $0x0,-0x4(%rbp)
+  402c75:	75 16                	jne    402c8d <switch_blend+0x34>
+  402c77:	bf e2 0b 00 00       	mov    $0xbe2,%edi
+  402c7c:	e8 0f e2 ff ff       	callq  400e90 <glDisable@plt>
+  402c81:	bf 71 0b 00 00       	mov    $0xb71,%edi
+  402c86:	e8 b5 e1 ff ff       	callq  400e40 <glEnable@plt>
+  402c8b:	eb 14                	jmp    402ca1 <switch_blend+0x48>
+  402c8d:	bf e2 0b 00 00       	mov    $0xbe2,%edi
+  402c92:	e8 a9 e1 ff ff       	callq  400e40 <glEnable@plt>
+  402c97:	bf 71 0b 00 00       	mov    $0xb71,%edi
+  402c9c:	e8 ef e1 ff ff       	callq  400e90 <glDisable@plt>
+  402ca1:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  402ca4:	c9                   	leaveq 
+  402ca5:	c3                   	retq   
+
+0000000000402ca6 <switch_light>:
+  402ca6:	55                   	push   %rbp
+  402ca7:	48 89 e5             	mov    %rsp,%rbp
+  402caa:	48 83 ec 10          	sub    $0x10,%rsp
+  402cae:	89 7d fc             	mov    %edi,-0x4(%rbp)
+  402cb1:	83 7d fc 00          	cmpl   $0x0,-0x4(%rbp)
+  402cb5:	0f 94 c0             	sete   %al
+  402cb8:	0f b6 c0             	movzbl %al,%eax
+  402cbb:	89 45 fc             	mov    %eax,-0x4(%rbp)
+  402cbe:	83 7d fc 00          	cmpl   $0x0,-0x4(%rbp)
+  402cc2:	75 16                	jne    402cda <switch_light+0x34>
+  402cc4:	bf 50 0b 00 00       	mov    $0xb50,%edi
+  402cc9:	e8 c2 e1 ff ff       	callq  400e90 <glDisable@plt>
+  402cce:	bf 57 0b 00 00       	mov    $0xb57,%edi
+  402cd3:	e8 b8 e1 ff ff       	callq  400e90 <glDisable@plt>
+  402cd8:	eb 14                	jmp    402cee <switch_light+0x48>
+  402cda:	bf 50 0b 00 00       	mov    $0xb50,%edi
+  402cdf:	e8 5c e1 ff ff       	callq  400e40 <glEnable@plt>
+  402ce4:	bf 57 0b 00 00       	mov    $0xb57,%edi
+  402ce9:	e8 52 e1 ff ff       	callq  400e40 <glEnable@plt>
+  402cee:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  402cf1:	c9                   	leaveq 
+  402cf2:	c3                   	retq   
+
+0000000000402cf3 <VM_init>:
+  402cf3:	55                   	push   %rbp
+  402cf4:	48 89 e5             	mov    %rsp,%rbp
+  402cf7:	48 83 ec 10          	sub    $0x10,%rsp
+  402cfb:	bf 00 41 00 00       	mov    $0x4100,%edi
+  402d00:	e8 9b e1 ff ff       	callq  400ea0 <glClear@plt>
+  402d05:	e8 06 e2 ff ff       	callq  400f10 <glLoadIdentity@plt>
+  402d0a:	8b 05 48 14 20 00    	mov    0x201448(%rip),%eax        # 604158 <z>
+  402d10:	89 45 fc             	mov    %eax,-0x4(%rbp)
+  402d13:	f3 0f 10 55 fc       	movss  -0x4(%rbp),%xmm2
+  402d18:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402d1b:	0f 57 c0             	xorps  %xmm0,%xmm0
+  402d1e:	e8 5d e2 ff ff       	callq  400f80 <glTranslatef@plt>
+  402d23:	8b 05 3b 14 20 00    	mov    0x20143b(%rip),%eax        # 604164 <xrot>
+  402d29:	0f 57 db             	xorps  %xmm3,%xmm3
+  402d2c:	0f 57 d2             	xorps  %xmm2,%xmm2
+  402d2f:	f3 0f 10 0d dd 04 00 	movss  0x4dd(%rip),%xmm1        # 403214 <_IO_stdin_used+0x404>
+  402d36:	00 
+  402d37:	89 45 fc             	mov    %eax,-0x4(%rbp)
+  402d3a:	f3 0f 10 45 fc       	movss  -0x4(%rbp),%xmm0
+  402d3f:	e8 8c e2 ff ff       	callq  400fd0 <glRotatef@plt>
+  402d44:	8b 05 1e 14 20 00    	mov    0x20141e(%rip),%eax        # 604168 <yrot>
+  402d4a:	0f 57 db             	xorps  %xmm3,%xmm3
+  402d4d:	f3 0f 10 15 bf 04 00 	movss  0x4bf(%rip),%xmm2        # 403214 <_IO_stdin_used+0x404>
+  402d54:	00 
+  402d55:	0f 57 c9             	xorps  %xmm1,%xmm1
+  402d58:	89 45 fc             	mov    %eax,-0x4(%rbp)
+  402d5b:	f3 0f 10 45 fc       	movss  -0x4(%rbp),%xmm0
+  402d60:	e8 6b e2 ff ff       	callq  400fd0 <glRotatef@plt>
+  402d65:	f3 0f 10 15 a7 04 00 	movss  0x4a7(%rip),%xmm2        # 403214 <_IO_stdin_used+0x404>
+  402d6c:	00 
+  402d6d:	f3 0f 10 0d 9f 04 00 	movss  0x49f(%rip),%xmm1        # 403214 <_IO_stdin_used+0x404>
+  402d74:	00 
+  402d75:	f3 0f 10 05 97 04 00 	movss  0x497(%rip),%xmm0        # 403214 <_IO_stdin_used+0x404>
+  402d7c:	00 
+  402d7d:	e8 ae e2 ff ff       	callq  401030 <glColor3f@plt>
+  402d82:	c9                   	leaveq 
+  402d83:	c3                   	retq   
+  402d84:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  402d8b:	00 00 00 
+  402d8e:	66 90                	xchg   %ax,%ax
+
+0000000000402d90 <__libc_csu_init>:
+  402d90:	41 57                	push   %r15
+  402d92:	41 89 ff             	mov    %edi,%r15d
+  402d95:	41 56                	push   %r14
+  402d97:	49 89 f6             	mov    %rsi,%r14
+  402d9a:	41 55                	push   %r13
+  402d9c:	49 89 d5             	mov    %rdx,%r13
+  402d9f:	41 54                	push   %r12
+  402da1:	4c 8d 25 38 10 20 00 	lea    0x201038(%rip),%r12        # 603de0 <__frame_dummy_init_array_entry>
+  402da8:	55                   	push   %rbp
+  402da9:	48 8d 2d 38 10 20 00 	lea    0x201038(%rip),%rbp        # 603de8 <__init_array_end>
+  402db0:	53                   	push   %rbx
+  402db1:	4c 29 e5             	sub    %r12,%rbp
+  402db4:	31 db                	xor    %ebx,%ebx
+  402db6:	48 c1 fd 03          	sar    $0x3,%rbp
+  402dba:	48 83 ec 08          	sub    $0x8,%rsp
+  402dbe:	e8 35 e0 ff ff       	callq  400df8 <_init>
+  402dc3:	48 85 ed             	test   %rbp,%rbp
+  402dc6:	74 1e                	je     402de6 <__libc_csu_init+0x56>
+  402dc8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  402dcf:	00 
+  402dd0:	4c 89 ea             	mov    %r13,%rdx
+  402dd3:	4c 89 f6             	mov    %r14,%rsi
+  402dd6:	44 89 ff             	mov    %r15d,%edi
+  402dd9:	41 ff 14 dc          	callq  *(%r12,%rbx,8)
+  402ddd:	48 83 c3 01          	add    $0x1,%rbx
+  402de1:	48 39 eb             	cmp    %rbp,%rbx
+  402de4:	75 ea                	jne    402dd0 <__libc_csu_init+0x40>
+  402de6:	48 83 c4 08          	add    $0x8,%rsp
+  402dea:	5b                   	pop    %rbx
+  402deb:	5d                   	pop    %rbp
+  402dec:	41 5c                	pop    %r12
+  402dee:	41 5d                	pop    %r13
+  402df0:	41 5e                	pop    %r14
+  402df2:	41 5f                	pop    %r15
+  402df4:	c3                   	retq   
+  402df5:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+  402dfc:	00 00 00 00 
+
+0000000000402e00 <__libc_csu_fini>:
+  402e00:	f3 c3                	repz retq 
+
+Disassembly of section .fini:
+
+0000000000402e04 <_fini>:
+  402e04:	48 83 ec 08          	sub    $0x8,%rsp
+  402e08:	48 83 c4 08          	add    $0x8,%rsp
+  402e0c:	c3                   	retq   

@@ -21,4 +21,26 @@
 #define LEFT_ARROW 75
 #define RIGHT_ARROW 77
 
+#define TOUCHE_MIN_A 97
+#define TOUCHE_MAJ_A 65
+#define TOUCHE_MIN_Z 122
+#define TOUCHE_MAJ_Z 90
+
+#define TOUCHE_MIN_S 115
+#define TOUCHE_MAJ_S 83
+#define TOUCHE_MIN_D 100
+#define TOUCHE_MAJ_D 68
+#define TOUCHE_MIN_F 102
+#define TOUCHE_MAJ_F 70
+#define TOUCHE_MIN_G 103
+#define TOUCHE_MAJ_G 71
+
+#define TOUCHE_MIN_E 101
+#define TOUCHE_MAJ_E 69
+#define TOUCHE_MIN_R 114
+#define TOUCHE_MAJ_R 82
+#define TOUCHE_MIN_T 116
+#define TOUCHE_MAJ_T 84
+#define TOUCHE_MIN_Y 121
+#define TOUCHE_MAJ_Y 89
 #endif

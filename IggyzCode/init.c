@@ -9,8 +9,8 @@ int window;
 extern GLfloat z;
 extern GLfloat xrot;   
 extern GLfloat yrot; 
-GLuint  blend = 1;
-GLuint  light = 0;
+GLuint  blend = 0;
+GLuint  light = 1;
 
 /* A general OpenGL initialization function.  Sets all of the initial parameters. */
 GLvoid InitGL(GLsizei Width, GLsizei Height)	// We call this right after our OpenGL window is created.
